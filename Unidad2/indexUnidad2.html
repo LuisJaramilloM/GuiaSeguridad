@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.21">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Unidad : Seguridad en Endpoints (TI y OT) – Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Unidad3/indexUnidad3.html" rel="next">
+<link href="../Unidad1/indexUnidad1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad2/indexUnidad2.html">Seguridad en Endpoints (TI y OT)</a></li><li class="breadcrumb-item"><a href="../Unidad2/indexUnidad2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Unidad: Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Gestión de Usuarios y Roles</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad1/indexUnidad1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seguridad en Endpoints (TI y OT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad2/indexUnidad2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seguridad en Red y Conectividad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad3/indexUnidad3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unidad : Introducción a la Seguridad de Redes y Conectividad</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Servidores y Aplicaciones Críticas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad4/indexUnidad4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Firewalls, WAF y Seguridad Perimetral</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad5/indexUnidad5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Monitoreo y Respuesta a Incidentes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad6/indexUnidad6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Gestión de Parches y Actualizaciones</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad7/indexUnidad7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Respaldos y Continuidad del Negocio</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad8/indexUnidad8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Protección de Datos y Cumplimiento Legal</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad9/indexUnidad9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Ciberseguridad Operativa y Tecnologías Emergentes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad10/indexUnidad10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción-de-la-unidad" id="toc-introducción-de-la-unidad" class="nav-link active" data-scroll-target="#introducción-de-la-unidad"><span class="header-section-number">3.1</span> <strong>Introducción de la Unidad</strong></a></li>
+  <li><a href="#endpoints-de-tecnologías-de-la-información-ti" id="toc-endpoints-de-tecnologías-de-la-información-ti" class="nav-link" data-scroll-target="#endpoints-de-tecnologías-de-la-información-ti"><span class="header-section-number">3.2</span> <strong>Endpoints de Tecnologías de la Información (TI)</strong></a>
+  <ul class="collapse">
+  <li><a href="#gestión-de-cuentas-y-privilegios" id="toc-gestión-de-cuentas-y-privilegios" class="nav-link" data-scroll-target="#gestión-de-cuentas-y-privilegios"><span class="header-section-number">3.2.1</span> <strong>Gestión de cuentas y privilegios</strong></a></li>
+  <li><a href="#hardening-del-sistema-operativo" id="toc-hardening-del-sistema-operativo" class="nav-link" data-scroll-target="#hardening-del-sistema-operativo"><span class="header-section-number">3.2.2</span> <strong>Hardening del sistema operativo</strong></a></li>
+  <li><a href="#soluciones-de-seguridad-avanzada" id="toc-soluciones-de-seguridad-avanzada" class="nav-link" data-scroll-target="#soluciones-de-seguridad-avanzada"><span class="header-section-number">3.2.3</span> <strong>Soluciones de seguridad avanzada</strong></a></li>
+  <li><a href="#checklist-de-seguridad-y-hardening-de-endpoints-ti" id="toc-checklist-de-seguridad-y-hardening-de-endpoints-ti" class="nav-link" data-scroll-target="#checklist-de-seguridad-y-hardening-de-endpoints-ti"><span class="header-section-number">3.2.4</span> <strong>Checklist de Seguridad y Hardening de Endpoints TI</strong></a></li>
+  <li><a href="#checklist-de-seguridad-y-hardening-de-endpoints-ot" id="toc-checklist-de-seguridad-y-hardening-de-endpoints-ot" class="nav-link" data-scroll-target="#checklist-de-seguridad-y-hardening-de-endpoints-ot"><span class="header-section-number">3.2.5</span> <strong>Checklist de Seguridad y Hardening de Endpoints OT</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad2/indexUnidad2.html">Seguridad en Endpoints (TI y OT)</a></li><li class="breadcrumb-item"><a href="../Unidad2/indexUnidad2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción-de-la-unidad" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introducción-de-la-unidad"><span class="header-section-number">3.1</span> <strong>Introducción de la Unidad</strong></h2>
+<p>Los dispositivos de usuario —conocidos como <strong>endpoints</strong>— representan la primera línea de defensa en cualquier institución financiera. Se incluyen aquí las <strong>estaciones de trabajo, laptops, dispositivos móviles corporativos, consolas administrativas</strong> y, en el ámbito operativo, los <strong>cajeros automáticos (ATM), sistemas de control de accesos, SCADA y otros equipos OT</strong>.</p>
+<p>El compromiso de un endpoint puede convertirse en la puerta de entrada para ciberataques que escalen hacia sistemas críticos, afectando tanto a la continuidad del negocio como a la confianza de clientes y reguladores. Los ataques más frecuentes —malware, ransomware, phishing y abuso de credenciales— suelen iniciarse en un equipo de usuario.</p>
+<p>Normativas como <strong>ISO/IEC 27002</strong> (controles de seguridad en activos tecnológicos), <strong>PCI DSS v4.0</strong> (Req. 5 – protección contra malware), <strong>CIS Controls v8</strong> (Control 10 – Malware Defenses) y la <strong>Ley Orgánica de Protección de Datos Personales (LOPDP, Ecuador)</strong> establecen requisitos claros para proteger los endpoints. Sin embargo, estas normas requieren traducirse en medidas concretas y verificables.</p>
+<p>En esta unidad se establecen las medidas de seguridad para endpoints de <strong>TI</strong> y <strong>OT</strong>, las responsabilidades de los diferentes actores (usuarios, TI, seguridad, RRHH) y un checklist de revisión que facilita su auditoría.</p>
+</section>
+<section id="endpoints-de-tecnologías-de-la-información-ti" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="endpoints-de-tecnologías-de-la-información-ti"><span class="header-section-number">3.2</span> <strong>Endpoints de Tecnologías de la Información (TI)</strong></h2>
+<p>La seguridad en dispositivos de usuario conforme a <strong>ISO/IEC 27002, CIS Controls, PCI DSS Req. 5 y LOPDP</strong> establece que todo equipo que acceda a la red corporativa debe estar protegido mediante:</p>
+<ul>
+<li><p><strong>Gestión de cuentas y privilegios mínimos</strong> (usuarios estándar vs.&nbsp;administradores).</p></li>
+<li><p><strong>Hardening del sistema operativo</strong> (puertos, servicios, políticas de seguridad).</p></li>
+<li><p><strong>Soluciones de seguridad avanzada</strong> (antivirus, EDR, firewall local).</p></li>
+<li><p><strong>Monitoreo y control remoto</strong> (herramientas RMM como Kaseya 365 o similares).</p></li>
+<li><p><strong>Políticas de respaldo y cifrado</strong> (BitLocker, LUKS, FileVault).</p></li>
+</ul>
+<p>Esto es importante porque los endpoints son la primera línea de ataque: un <strong>malware, ransomware o phishing</strong> entra generalmente por un equipo de usuario.</p>
+<p><strong>Riesgos Globales Asociados a Endpoints</strong></p>
+<ul>
+<li><p><strong>Malware y ransomware</strong> propagados desde equipos de usuario a la red interna.</p></li>
+<li><p><strong>Exfiltración de datos</strong> personales y financieros por falta de cifrado.</p></li>
+<li><p><strong>Fraudes internos</strong> al permitir privilegios excesivos en endpoints de usuarios.</p></li>
+<li><p><strong>Interrupción de servicios OT</strong>, como cajeros automáticos, por fallas de actualización o explotación de vulnerabilidades no parcheadas.</p></li>
+<li><p><strong>Incumplimiento legal (LOPDP, PCI DSS)</strong> al no proteger adecuadamente datos sensibles almacenados en dispositivos.</p></li>
+<li><p><strong>Daños reputacionales</strong> en caso de que equipos comprometidos sean origen de fuga de datos de clientes.</p></li>
+</ul>
+<section id="gestión-de-cuentas-y-privilegios" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="gestión-de-cuentas-y-privilegios"><span class="header-section-number">3.2.1</span> <strong>Gestión de cuentas y privilegios</strong></h3>
+<ul>
+<li><p>Separación estricta entre <strong>cuentas de administrador</strong> y <strong>cuentas de usuario estándar</strong>.</p></li>
+<li><p>Aplicación del <strong>principio de mínimo privilegio</strong>, garantizando que los usuarios solo accedan a lo estrictamente necesario.</p></li>
+<li><p>Deshabilitar o renombrar la cuenta “Administrador” predeterminada.</p></li>
+<li><p>Habilitar <strong>MFA en cuentas privilegiadas</strong>.</p></li>
+</ul>
+</section>
+<section id="hardening-del-sistema-operativo" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="hardening-del-sistema-operativo"><span class="header-section-number">3.2.2</span> <strong>Hardening del sistema operativo</strong></h3>
+<ul>
+<li><p>Restricción de acceso a carpetas críticas (ej. <strong>System32</strong>).</p></li>
+<li><p>Bloqueo de <strong>CMD, PowerShell y WMI</strong> en usuarios estándar.</p></li>
+<li><p>Políticas de <strong>bloqueo automático de pantalla</strong> tras 5 minutos de inactividad.</p></li>
+<li><p>Arranque desde USB o CD deshabilitado salvo autorización formal.</p></li>
+</ul>
+</section>
+<section id="soluciones-de-seguridad-avanzada" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="soluciones-de-seguridad-avanzada"><span class="header-section-number">3.2.3</span> <strong>Soluciones de seguridad avanzada</strong></h3>
+<ul>
+<li><p><strong>Antivirus corporativo</strong> activo y actualizado.</p></li>
+<li><p><strong>EDR (Endpoint Detection and Response)</strong> desplegado en todas las estaciones de trabajo, reportando a un <strong>SIEM central</strong>.</p></li>
+<li><p>Firewall local activo, con reglas predefinidas y puertos innecesarios bloqueados (ej. SMB, Telnet, RDP sin VPN).</p></li>
+</ul>
+<section id="monitoreo-y-control" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="monitoreo-y-control"><span class="header-section-number">3.2.3.1</span> <strong>Monitoreo y control</strong></h4>
+<ul>
+<li><p>Gestión centralizada de endpoints mediante herramientas de <strong>RMM</strong> (ej. Kaseya 365, Intune).</p></li>
+<li><p>Revisión periódica de logs enviados a <strong>SIEM</strong>.</p></li>
+<li><p>Alertas de comportamiento anómalo habilitadas.</p></li>
+</ul>
+</section>
+<section id="cifrado-y-respaldo" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="cifrado-y-respaldo"><span class="header-section-number">3.2.3.2</span> <strong>Cifrado y respaldo</strong></h4>
+<ul>
+<li><p>Discos duros cifrados (BitLocker, LUKS, FileVault).</p></li>
+<li><p>Respaldos automáticos y cifrados de archivos de usuario.</p></li>
+<li><p>Control estricto del uso de USBs y dispositivos externos.</p></li>
+</ul>
+<p>Para las seguridades en endpoint OT se debería tener las siguientes consideraciones:</p>
+</section>
+<section id="gestión-de-cuentas" class="level4" data-number="3.2.3.3">
+<h4 data-number="3.2.3.3" class="anchored" data-anchor-id="gestión-de-cuentas"><span class="header-section-number">3.2.3.3</span> <strong>Gestión de cuentas</strong></h4>
+<ul>
+<li><p>Diferenciación clara entre cuentas de administrador OT y operador estándar.</p></li>
+<li><p>Principio de mínimo privilegio aplicado a consolas SCADA y PLCs.</p></li>
+<li><p>MFA para accesos de operadores en consolas críticas.</p></li>
+</ul>
+</section>
+<section id="controles-de-permisos" class="level4" data-number="3.2.3.4">
+<h4 data-number="3.2.3.4" class="anchored" data-anchor-id="controles-de-permisos"><span class="header-section-number">3.2.3.4</span> <strong>Controles de permisos</strong></h4>
+<ul>
+<li><p>Prohibición a operadores estándar de modificar configuraciones críticas.</p></li>
+<li><p>Bloqueo de shells OT en consolas SCADA para usuarios no autorizados.</p></li>
+</ul>
+</section>
+<section id="seguridad-técnica" class="level4" data-number="3.2.3.5">
+<h4 data-number="3.2.3.5" class="anchored" data-anchor-id="seguridad-técnica"><span class="header-section-number">3.2.3.5</span> <strong>Seguridad técnica</strong></h4>
+<ul>
+<li><p>Antivirus/EDR compatibles con entornos OT, sin afectar la operación.</p></li>
+<li><p>Firmware actualizado en PLCs y dispositivos de control.</p></li>
+<li><p>Justificación documentada en caso de mantener sistemas legacy sin actualizar.</p></li>
+</ul>
+</section>
+<section id="monitoreo-y-respaldo" class="level4" data-number="3.2.3.6">
+<h4 data-number="3.2.3.6" class="anchored" data-anchor-id="monitoreo-y-respaldo"><span class="header-section-number">3.2.3.6</span> <strong>Monitoreo y respaldo</strong></h4>
+<ul>
+<li><p>Logs de OT enviados al SIEM corporativo (Wazuh, Splunk u otro).</p></li>
+<li><p>Respaldos periódicos de configuraciones OT y sistemas físicos.</p></li>
+<li><p>Registro cifrado de accesos biométricos y sistemas de control de accesos.</p></li>
+</ul>
+</section>
+<section id="red-y-segmentación" class="level4" data-number="3.2.3.7">
+<h4 data-number="3.2.3.7" class="anchored" data-anchor-id="red-y-segmentación"><span class="header-section-number">3.2.3.7</span> <strong>Red y segmentación</strong></h4>
+<ul>
+<li><p>VLAN exclusiva para OT, separada de la red de usuarios y servidores.</p></li>
+<li><p>Bloqueo de puertos inseguros (Telnet, SMB, RDP directo).</p></li>
+<li><p>Implementación de firewalls industriales y segmentación en DMZ OT.</p></li>
+</ul>
+</section>
+<section id="capacitación-y-conciencia" class="level4" data-number="3.2.3.8">
+<h4 data-number="3.2.3.8" class="anchored" data-anchor-id="capacitación-y-conciencia"><span class="header-section-number">3.2.3.8</span> <strong>Capacitación y Conciencia</strong></h4>
+<p>La capacitación en endpoints no se limita a los usuarios finales, sino que debe abarcar a <strong>TI, Seguridad y RRHH</strong>:</p>
+<ul>
+<li><p><strong>Usuarios finales:</strong></p></li>
+<li><p>Reconocimiento de intentos de phishing y malware.</p></li>
+<li><p>Políticas internas sobre contraseñas, MFA y uso de USBs.</p></li>
+<li><p>Responsabilidades legales en el manejo de datos personales.</p></li>
+<li><p><strong>TI y Seguridad:</strong></p></li>
+<li><p>Configuración de hardening, antivirus, EDR y firewalls.</p></li>
+<li><p>Uso correcto de herramientas de monitoreo y RMM (ej. Kaseya 365).</p></li>
+<li><p>Procedimientos legales al acceder a información de usuarios.</p></li>
+<li><p><strong>RRHH y Cumplimiento:</strong></p></li>
+<li><p>Políticas de inducción y capacitaciones periódicas documentadas.</p></li>
+<li><p>Inclusión de cláusulas de seguridad y uso aceptable en contratos laborales.</p></li>
+<li><p>Manejo de incidentes relacionados con usuarios y dispositivos.</p></li>
+</ul>
+</section>
+</section>
+<section id="checklist-de-seguridad-y-hardening-de-endpoints-ti" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="checklist-de-seguridad-y-hardening-de-endpoints-ti"><span class="header-section-number">3.2.4</span> <strong>Checklist de Seguridad y Hardening de Endpoints TI</strong></h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 34%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento a Revisar</th>
+<th>Detalle / Revisión</th>
+<th>Área / Rol</th>
+<th>Información almacenada</th>
+<th>Cifrado (Sí/No)</th>
+<th>Tipo de Riesgo</th>
+<th>Cumple (✔/✘)</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gestión de Cuentas</strong></td>
+<td>Existe cuenta Admin separada de usuario.</td>
+<td>TI / Todos</td>
+<td>Configuración del sistema</td>
+<td>No aplica</td>
+<td>Medio</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Usuarios trabajan con mínimo privilegio.</td>
+<td>Todos</td>
+<td>Apps de negocio</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>MFA en cuentas privilegiadas.</td>
+<td>TI / Seguridad</td>
+<td>Configuración</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Cuenta “Administrador” deshabilitada/renombrada.</td>
+<td>TI</td>
+<td>SO</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Permisos de Usuario</strong></td>
+<td>Configuración de permisos correcta (no acceso a System32, carpetas críticas).</td>
+<td>Todos</td>
+<td>OS</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Bloqueo de CMD y PowerShell en usuarios estándar.</td>
+<td>Todos</td>
+<td>SO</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Instalación de software restringida.</td>
+<td>Todos</td>
+<td>OS / Apps</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Antivirus / EDR</strong></td>
+<td>Antivirus activo y actualizado.</td>
+<td>Todos</td>
+<td>Endpoint</td>
+<td>No</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>EDR activo y reportando.</td>
+<td>Áreas críticas</td>
+<td>Datos sensibles</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Último escaneo registrado.</td>
+<td>Todos</td>
+<td>Archivos usuario</td>
+<td>No</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Sistema Operativo</strong></td>
+<td>SO soportado y actualizado.</td>
+<td>Todos</td>
+<td>Sistema</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Fecha de último parche aplicado.</td>
+<td>Todos</td>
+<td>Sistema OS</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Justificación si no está actualizado.</td>
+<td>TI</td>
+<td>Sistema</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Actualizaciones / Parches</strong></td>
+<td>Windows Update / apt update habilitado.</td>
+<td>Todos</td>
+<td>Sistema</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Aplicaciones críticas actualizadas.</td>
+<td>Todos</td>
+<td>ERP, Office, CRM</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Cifrado y Respaldo</strong></td>
+<td>Disco cifrado (BitLocker, LUKS, FileVault).</td>
+<td>Finanzas, RRHH, Gerencia</td>
+<td>Datos financieros/personales</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Respaldos configurados.</td>
+<td>Todos</td>
+<td>Archivos usuario</td>
+<td>Sí</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>USB controlados/restringidos.</td>
+<td>Todos</td>
+<td>SO</td>
+<td>No</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Firewall Local</strong></td>
+<td>Firewall activo con reglas.</td>
+<td>Todos</td>
+<td>Red</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Puertos innecesarios bloqueados (SMB, Telnet, RDP sin VPN).</td>
+<td>Todos</td>
+<td>Red</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Monitoreo y Control</strong></td>
+<td>Endpoint gestionado por RMM (Kaseya 365, Intune).</td>
+<td>TI</td>
+<td>Logs SO</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Logs enviados al SIEM.</td>
+<td>Seguridad</td>
+<td>Eventos</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Alertas de comportamiento anómalo habilitadas.</td>
+<td>Todos</td>
+<td>Eventos</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Políticas de Seguridad</strong></td>
+<td>Bloqueo de pantalla automática.</td>
+<td>Todos</td>
+<td>Sesiones</td>
+<td>No aplica</td>
+<td>Medio</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Arranque USB/CD bloqueado.</td>
+<td>Todos</td>
+<td>SO</td>
+<td>No aplica</td>
+<td>Al</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Listas blancas de aplicaciones (AppLocker, ACLs).</td>
+<td>Todos</td>
+<td>Apps</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Registro de último mantenimiento.</td>
+<td>Todos</td>
+<td>Todo el equipo</td>
+<td>No aplica</td>
+<td>Medio</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Capacitación de Usuarios</strong></td>
+<td>Capacitación en políticas internas y LOPDP.</td>
+<td>Todos</td>
+<td>Datos personales/biométricos</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Registro de fecha de última capacitación.</td>
+<td>RRHH / Cumplimiento</td>
+<td>Evidencias</td>
+<td>No aplica</td>
+<td>Medio</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="checklist-de-seguridad-y-hardening-de-endpoints-ot" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="checklist-de-seguridad-y-hardening-de-endpoints-ot"><span class="header-section-number">3.2.5</span> <strong>Checklist de Seguridad y Hardening de Endpoints OT</strong></h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 29%">
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento a Revisar</th>
+<th>Detalle / Revisión</th>
+<th>Área / Rol</th>
+<th>Información procesada</th>
+<th>Cifrado (Sí/No)</th>
+<th>Tipo de Riesgo</th>
+<th>Cumple (✔/✘)</th>
+<th>Observaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gestión de Cuentas OT</strong></td>
+<td>Cuentas diferenciadas Admin / Usuario.</td>
+<td>OT / Seguridad Física</td>
+<td>Configuración de SCADA/PLC</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Principio de mínimo privilegio aplicado en consolas OT.</td>
+<td>OT</td>
+<td>Alarmas, accesos físicos</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>MFA en accesos de operadores críticos.</td>
+<td>OT / Seguridad</td>
+<td>SCADA, CCTV</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Permisos de Usuario</strong></td>
+<td>Usuarios no modifican configuraciones críticas.</td>
+<td>OT</td>
+<td>PLCs / SCADA</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Bloqueo de shells OT para usuarios estándar.</td>
+<td>OT</td>
+<td>Consolas SCADA</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Antivirus / EDR en OT</strong></td>
+<td>Compatibles con SCADA/PLC (sin interferir procesos).</td>
+<td>OT</td>
+<td>Consolas de control</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Monitoreo de logs en SIEM.</td>
+<td>OT / Seguridad</td>
+<td>Eventos OT</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Sistema / Firmware OT</strong></td>
+<td>Firmware actualizado y soportado.</td>
+<td>OT</td>
+<td>PLCs, controladores</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Justificación si no se actualiza (sistemas legacy).</td>
+<td>OT</td>
+<td>SCADA antiguos</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Controles OT / Físicos</strong></td>
+<td>Endpoint controla alarmas, CCTV, accesos.</td>
+<td>Seguridad Física</td>
+<td>Datos de seguridad física</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Registro de accesos biométricos cifrado.</td>
+<td>Seguridad Física</td>
+<td>Datos biométricos</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Logs de OT enviados a SIEM.</td>
+<td>Seguridad OT</td>
+<td>Eventos físicos</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Cifrado y Respaldo OT</strong></td>
+<td>Respaldos de sistemas OT y logs físicos.</td>
+<td>OT / Seguridad Física</td>
+<td>Accesos / Alarmas</td>
+<td>Sí</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Red y Segmentación OT</strong></td>
+<td>Segmentación de red OT en VLAN/DMZ.</td>
+<td>TI/OT</td>
+<td>Red OT</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Bloqueo de puertos innecesarios (Telnet, SMB, RDP directo).</td>
+<td>OT</td>
+<td>Consolas</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Monitoreo y Control OT</strong></td>
+<td>Consola central de OT (SCADA Manager, Kaseya 365 OT).</td>
+<td>OT</td>
+<td>Logs OT</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Integración con SIEM corporativo (Wazuh, Splunk).</td>
+<td>Seguridad OT</td>
+<td>Eventos</td>
+<td>No aplica</td>
+<td>Crítico</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Capacitación de Usuarios</strong></td>
+<td>Capacitación en políticas internas y LOPDP.</td>
+<td>Todos</td>
+<td>Datos personales/biométricos</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Capacitación en uso seguro de OT (SCADA, accesos físicos).</td>
+<td>Seguridad Física</td>
+<td>Sistemas OT</td>
+<td>No aplica</td>
+<td>Alto</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Registro de fecha de última capacitación.</td>
+<td>RRHH / Cumplimiento</td>
+<td>Evidencias</td>
+<td>No aplica</td>
+<td>Medio</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Unidad1/indexUnidad1.html" class="pagination-link" aria-label="**Definición de Roles y Accesos**">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Unidad3/indexUnidad3.html" class="pagination-link" aria-label="Unidad : Introducción a la Seguridad de Redes y Conectividad">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unidad : Introducción a la Seguridad de Redes y Conectividad</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

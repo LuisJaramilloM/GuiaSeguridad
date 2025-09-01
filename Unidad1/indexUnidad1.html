@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.21">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Definición de Roles y Accesos – Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Unidad2/indexUnidad2.html" rel="next">
+<link href="../index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad1/indexUnidad1.html">Gestión de Usuarios y Roles</a></li><li class="breadcrumb-item"><a href="../Unidad1/indexUnidad1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Unidad: Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Gestión de Usuarios y Roles</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad1/indexUnidad1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seguridad en Endpoints (TI y OT)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad2/indexUnidad2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seguridad en Red y Conectividad</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad3/indexUnidad3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unidad : Introducción a la Seguridad de Redes y Conectividad</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Servidores y Aplicaciones Críticas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad4/indexUnidad4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Firewalls, WAF y Seguridad Perimetral</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad5/indexUnidad5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Monitoreo y Respuesta a Incidentes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad6/indexUnidad6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Gestión de Parches y Actualizaciones</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad7/indexUnidad7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Respaldos y Continuidad del Negocio</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad8/indexUnidad8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Protección de Datos y Cumplimiento Legal</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad9/indexUnidad9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Ciberseguridad Operativa y Tecnologías Emergentes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Unidad10/indexUnidad10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Seguridad en Endpoints (TI y OT)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#principios-a-considerar-para-la-creación-de-roles-y-accesos" id="toc-principios-a-considerar-para-la-creación-de-roles-y-accesos" class="nav-link active" data-scroll-target="#principios-a-considerar-para-la-creación-de-roles-y-accesos"><span class="header-section-number">2.1</span> Principios a considerar para la creación de roles y accesos</a>
+  <ul class="collapse">
+  <li><a href="#gobernanza-y-responsabilidades-de-los-roles-raci" id="toc-gobernanza-y-responsabilidades-de-los-roles-raci" class="nav-link" data-scroll-target="#gobernanza-y-responsabilidades-de-los-roles-raci"><span class="header-section-number">2.1.1</span> Gobernanza y responsabilidades de los roles (RACI)</a></li>
+  <li><a href="#modelo-de-roles-rbac-y-atributos-abac" id="toc-modelo-de-roles-rbac-y-atributos-abac" class="nav-link" data-scroll-target="#modelo-de-roles-rbac-y-atributos-abac"><span class="header-section-number">2.1.2</span> <strong>Modelo de roles (RBAC) y atributos (ABAC)</strong></a></li>
+  </ul></li>
+  <li><a href="#separación-de-funciones-sod" id="toc-separación-de-funciones-sod" class="nav-link" data-scroll-target="#separación-de-funciones-sod"><span class="header-section-number">2.2</span> Separación de funciones (SoD)</a></li>
+  <li><a href="#proceso-jml-joinermoverleaver" id="toc-proceso-jml-joinermoverleaver" class="nav-link" data-scroll-target="#proceso-jml-joinermoverleaver"><span class="header-section-number">2.3</span> <em>Proceso JML (Joiner–Mover–Leaver)</em></a></li>
+  <li><a href="#acceso-a-recursos-y-puertos" id="toc-acceso-a-recursos-y-puertos" class="nav-link" data-scroll-target="#acceso-a-recursos-y-puertos"><span class="header-section-number">2.4</span> <strong>Acceso a Recursos y Puertos</strong></a>
+  <ul class="collapse">
+  <li><a href="#tabla-de-accesos-permitidos-y-denegados" id="toc-tabla-de-accesos-permitidos-y-denegados" class="nav-link" data-scroll-target="#tabla-de-accesos-permitidos-y-denegados"><span class="header-section-number">2.4.1</span> <em>Tabla de Accesos Permitidos y Denegados</em></a></li>
+  </ul></li>
+  <li><a href="#aspectos-legales-en-la-gestión-de-usuarios" id="toc-aspectos-legales-en-la-gestión-de-usuarios" class="nav-link" data-scroll-target="#aspectos-legales-en-la-gestión-de-usuarios"><span class="header-section-number">2.5</span> <strong>Aspectos Legales en la Gestión de Usuarios</strong></a>
+  <ul class="collapse">
+  <li><a href="#fundamento-normativo" id="toc-fundamento-normativo" class="nav-link" data-scroll-target="#fundamento-normativo"><span class="header-section-number">2.5.1</span> <strong>Fundamento Normativo</strong></a></li>
+  <li><a href="#obligaciones-para-usuarios-internos" id="toc-obligaciones-para-usuarios-internos" class="nav-link" data-scroll-target="#obligaciones-para-usuarios-internos"><span class="header-section-number">2.5.2</span> <em>Obligaciones para Usuarios Internos</em></a></li>
+  <li><a href="#obligaciones-para-proveedores-y-externos" id="toc-obligaciones-para-proveedores-y-externos" class="nav-link" data-scroll-target="#obligaciones-para-proveedores-y-externos"><span class="header-section-number">2.5.3</span> <strong>Obligaciones para Proveedores y Externos</strong></a></li>
+  <li><a href="#riesgos-legales-sin-control" id="toc-riesgos-legales-sin-control" class="nav-link" data-scroll-target="#riesgos-legales-sin-control"><span class="header-section-number">2.5.4</span> <strong>Riesgos Legales sin Control</strong></a></li>
+  <li><a href="#tabla-de-referencia-aspectos-legales-en-la-gestión-de-usuarios" id="toc-tabla-de-referencia-aspectos-legales-en-la-gestión-de-usuarios" class="nav-link" data-scroll-target="#tabla-de-referencia-aspectos-legales-en-la-gestión-de-usuarios"><span class="header-section-number">2.5.5</span> <strong>Tabla de Referencia – Aspectos Legales en la Gestión de Usuarios</strong></a></li>
+  </ul></li>
+  <li><a href="#aspectos-legales-en-pentesting-y-auditorías-de-seguridad" id="toc-aspectos-legales-en-pentesting-y-auditorías-de-seguridad" class="nav-link" data-scroll-target="#aspectos-legales-en-pentesting-y-auditorías-de-seguridad"><span class="header-section-number">2.6</span> <strong>Aspectos Legales en Pentesting y Auditorías de Seguridad</strong></a>
+  <ul class="collapse">
+  <li><a href="#tabla-de-referencia-aspectos-legales-en-pentesting" id="toc-tabla-de-referencia-aspectos-legales-en-pentesting" class="nav-link" data-scroll-target="#tabla-de-referencia-aspectos-legales-en-pentesting"><span class="header-section-number">2.6.1</span> <strong>Tabla de Referencia – Aspectos Legales en Pentesting</strong></a></li>
+  </ul></li>
+  <li><a href="#resumen" id="toc-resumen" class="nav-link" data-scroll-target="#resumen"><span class="header-section-number">2.7</span> <strong>Resumen</strong></a>
+  <ul class="collapse">
+  <li><a href="#checklist-de-verificación-y-riesgos-asociados" id="toc-checklist-de-verificación-y-riesgos-asociados" class="nav-link" data-scroll-target="#checklist-de-verificación-y-riesgos-asociados"><span class="header-section-number">2.7.1</span> <strong>Checklist de Verificación y Riesgos Asociados</strong></a></li>
+  <li><a href="#riesgos-globales-asociados-a-la-mala-gestión-de-usuarios" id="toc-riesgos-globales-asociados-a-la-mala-gestión-de-usuarios" class="nav-link" data-scroll-target="#riesgos-globales-asociados-a-la-mala-gestión-de-usuarios"><span class="header-section-number">2.7.2</span> Riesgos Globales Asociados a la Mala Gestión de Usuarios</a></li>
+  </ul></li>
+  <li><a href="#política-de-accesos-por-rol" id="toc-política-de-accesos-por-rol" class="nav-link" data-scroll-target="#política-de-accesos-por-rol"><span class="header-section-number">2.8</span> Política de Accesos por Rol</a>
+  <ul class="collapse">
+  <li><a href="#roles-operativos-front-office-y-atención-al-cliente" id="toc-roles-operativos-front-office-y-atención-al-cliente" class="nav-link" data-scroll-target="#roles-operativos-front-office-y-atención-al-cliente"><span class="header-section-number">2.8.1</span> Roles Operativos (Front-Office y Atención al Cliente)</a></li>
+  <li><a href="#roles-administrativos-y-de-apoyo-middle-office" id="toc-roles-administrativos-y-de-apoyo-middle-office" class="nav-link" data-scroll-target="#roles-administrativos-y-de-apoyo-middle-office"><span class="header-section-number">2.8.2</span> Roles Administrativos y de Apoyo (Middle-Office)</a></li>
+  <li><a href="#roles-tecnológicos-ti-e-infraestructura" id="toc-roles-tecnológicos-ti-e-infraestructura" class="nav-link" data-scroll-target="#roles-tecnológicos-ti-e-infraestructura"><span class="header-section-number">2.8.3</span> Roles Tecnológicos (TI e Infraestructura)</a></li>
+  <li><a href="#roles-de-seguridad-ciberseguridad-y-cumplimiento" id="toc-roles-de-seguridad-ciberseguridad-y-cumplimiento" class="nav-link" data-scroll-target="#roles-de-seguridad-ciberseguridad-y-cumplimiento"><span class="header-section-number">2.8.4</span> Roles de Seguridad (Ciberseguridad y Cumplimiento)</a></li>
+  <li><a href="#roles-directivos-y-estratégicos" id="toc-roles-directivos-y-estratégicos" class="nav-link" data-scroll-target="#roles-directivos-y-estratégicos"><span class="header-section-number">2.8.5</span> Roles Directivos y Estratégicos</a></li>
+  <li><a href="#externos" id="toc-externos" class="nav-link" data-scroll-target="#externos"><span class="header-section-number">2.8.6</span> Externos</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad1/indexUnidad1.html">Gestión de Usuarios y Roles</a></li><li class="breadcrumb-item"><a href="../Unidad1/indexUnidad1.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title"><strong>Definición de Roles y Accesos</strong></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>La gestión de usuarios y roles constituye la base de la seguridad en cualquier institución financiera. Definir quién accede, a qué recursos y bajo qué condiciones, determina en gran medida la capacidad de la organización para prevenir accesos indebidos, fraudes internos y ataques cibernéticos.En el sector financiero, la correcta administración de identidades y privilegios es un requisito regulatorio y de cumplimiento normativo, además de ser un pilar para la protección de datos sensibles y operaciones críticas.</p>
+<p>Diversas normativas internacionales refuerzan esta necesidad, entre las cuales se destacan:</p>
+<ul>
+<li><p>ISO/IEC 27001 (control de accesos).</p></li>
+<li><p>ISO/IEC 27701 (privacidad y datos personales).</p></li>
+<li><p>PCI DSS v4.0 (protección de datos de tarjetas).</p></li>
+<li><p>marcos como NIST CSF y CIS Controls.</p></li>
+</ul>
+<p>A nivel nacional</p>
+<ul>
+<li>la Ley Orgánica de Protección de Datos Personales (LOPDP) la cuál exige medidas proporcionales para garantizar que solo personal autorizado acceda a la información personal de clientes.</li>
+</ul>
+<p>Esta unidad proporciona lineamientos detallados sobre cómo estructurar, gestionar y controlar los roles de usuario, desde el cajero bancario hasta el analista de seguridad en un SOC, incluyendo personal externo y proveedores</p>
+<p>En el sector financiero, la correcta definición y gestión de roles y accesos es vital para proteger la información sensible de clientes, transacciones y operaciones internas.<br>
+El objetivo de esta unidad es establecer cómo se <strong>definen, asignan, revisan y revocan</strong> los accesos a sistemas y datos bajo los principios de <strong>Mínimo Privilegio</strong> y <strong>Confianza Cero (Zero Trust)</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Nota:</strong><br>
+- <strong>Mínimo privilegio:</strong> cada persona recibe solo lo necesario para cumplir su trabajo.<br>
+- <strong>Confianza Cero (Zero Trust):</strong> no se confía por defecto en ningún usuario, dispositivo o red, siempre se valida la identidad y el contexto.</p>
+</blockquote>
+<p>Aplica a: <strong>usuarios internos</strong>, <strong>terceros</strong>, <strong>cuentas de servicio</strong>, <strong>sistemas críticos</strong> (core bancario, pagos, tesorería), <strong>infraestructura tecnológica</strong> (Active Directory, firewalls, switches), y <strong>herramientas de monitoreo</strong> (SIEM, EDR/XDR).</p>
+<section id="principios-a-considerar-para-la-creación-de-roles-y-accesos" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="principios-a-considerar-para-la-creación-de-roles-y-accesos"><span class="header-section-number">2.1</span> Principios a considerar para la creación de roles y accesos</h2>
+<ul>
+<li><strong>Mínimo privilegio:</strong> cada identidad recibe solo los permisos estrictamente necesarios para su función.</li>
+<li><strong>Confianza cero:</strong> verificar de forma continua identidad, dispositivo y contexto antes de conceder acceso.</li>
+<li><strong>Separación de funciones (SoD):</strong> ninguna persona controla extremo a extremo un proceso crítico (p.ej., creación y aprobación de pagos).</li>
+<li><strong>Trazabilidad:</strong> toda acción relevante debe ser registrable y atribuible.</li>
+<li><strong>Temporalidad:</strong> accesos privilegiados <strong>con caducidad</strong> y justificación.</li>
+<li><strong>Automatización:</strong> preferencia por <strong>RBAC</strong>/grupos y flujos automáticos de alta/cambio/baja (JML).</li>
+</ul>
+<section id="gobernanza-y-responsabilidades-de-los-roles-raci" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="gobernanza-y-responsabilidades-de-los-roles-raci"><span class="header-section-number">2.1.1</span> Gobernanza y responsabilidades de los roles (RACI)</h3>
+<p>R: Responsable (ejecuta) · A: Aprobador final · C: Consultado · I: Informado.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 16%">
+<col style="width: 7%">
+<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Actividad</th>
+<th>Seguridad (CISO)</th>
+<th>TI/IdP</th>
+<th>Dueño de Activo</th>
+<th>Talento Humano</th>
+<th>Auditoría</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Definir/actualizar roles</td>
+<td>R</td>
+<td>C</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr class="even">
+<td>Aprobar acceso a sistemas críticos</td>
+<td>C</td>
+<td>C</td>
+<td>A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr class="odd">
+<td>Provisionar/desprovisionar (IdP/AD)</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr class="even">
+<td>Recertificación de accesos</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr class="odd">
+<td>Gestión cuentas privilegiadas/PAM</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>Gestión de terceros</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p>Un <strong>IdP (Identity Provider, Proveedor de Identidad)</strong> es el sistema o servicio encargado de <strong>gestionar identidades digitales</strong> dentro de una organización.</p>
+<p>Su función principal es <strong>autenticar</strong> a los usuarios (verificar que son quienes dicen ser) y <strong>emitir credenciales o tokens</strong> que les permiten acceder a aplicaciones, sistemas o datos.</p>
+<p><strong>Ejemplo explicativo</strong> - <strong>Definir/actualizar roles:</strong> el área de <strong>TI</strong> puede proponer un nuevo rol (ej. <em>Analista de Fraudes</em>), pero <strong>Talento Humano</strong> valida que el perfil existe en la organización y el <strong>Dueño del Activo</strong> aprueba qué accesos lleva.<br>
+- <strong>Provisionar/desprovisionar:</strong> si un empleado entra a la organización, <strong>Talento Humano</strong> notifica a <strong>TI</strong>, que crea el usuario en el IdP. Si ese empleado sale, TI deshabilita la cuenta en un plazo máximo de 1 hora.<br>
+- <strong>Gestión de terceros:</strong> si entra un proveedor, Seguridad aprueba el nivel de acceso, TI lo crea en el sistema, y Talento Humano confirma contrato y vigencia.</p>
+<hr>
+</section>
+<section id="modelo-de-roles-rbac-y-atributos-abac" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="modelo-de-roles-rbac-y-atributos-abac"><span class="header-section-number">2.1.2</span> <strong>Modelo de roles (RBAC) y atributos (ABAC)</strong></h3>
+<p><em>¿Qué es RBAC?</em></p>
+<p><strong>RBAC (Role-Based Access Control, Control de Acceso Basado en Roles)</strong> es un modelo donde los permisos no se asignan a cada usuario directamente, sino a <strong>roles predefinidos</strong>.<br>
+Luego, los usuarios reciben esos roles de acuerdo a su puesto o función.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li><p>Simplifica la administración de accesos.</p></li>
+<li><p>Roles alineados con puestos de trabajo (ej. <em>Cajero</em>, <em>Analista de Finanzas</em>, <em>Administrador de Infraestructura</em>).</p></li>
+<li><p>Evita la asignación individual de permisos.</p></li>
+<li><p>Facilita auditorías: se revisan roles en lugar de miles de permisos individuales.</p></li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Un <strong>Analista de Finanzas</strong> tiene permisos para crear órdenes de pago en el ERP, pero no para aprobarlas. Si otro empleado entra al mismo puesto, se le asigna el rol y hereda los mismos accesos automáticamente.</p>
+<p><em>¿Qué es ABAC?</em></p>
+<p><strong>ABAC (Attribute-Based Access Control, Control de Acceso Basado en Atributos)</strong> es un modelo más dinámico que usa <strong>atributos</strong> (del usuario, del recurso o del contexto) para decidir si se permite o no el acceso.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li><p>Usa reglas lógicas basadas en atributos.</p></li>
+<li><p>Permite decisiones más granulares que RBAC</p></li>
+<li><p>Se adapta a condiciones contextuales (hora, ubicación, nivel de riesgo del dispositivo)</p></li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li><p>Un empleado de <strong>Tesorería</strong> puede aprobar pagos <strong>solo en horario laboral (08h00–19h00)</strong> y <strong>desde la red corporativa</strong></p></li>
+<li><p>Si intenta aprobar un pago a las 23h00 desde su casa → el IdP aplica <strong>ABAC</strong> y bloquea el acceso o pide <strong>MFA adicional</strong>.</p></li>
+</ul>
+<section id="catálogo-de-roles-ejemplo" class="level4" data-number="2.1.2.1">
+<h4 data-number="2.1.2.1" class="anchored" data-anchor-id="catálogo-de-roles-ejemplo"><span class="header-section-number">2.1.2.1</span> Catálogo de roles (ejemplo)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rol</th>
+<th>Descripción</th>
+<th>Grupo/IdP</th>
+<th>Sistemas</th>
+<th>Permisos clave</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Empleado-Operativo</strong></td>
+<td>Operaciones diarias</td>
+<td>grp_emp_oper</td>
+<td>Core, CRM</td>
+<td>Consulta/alta tickets, no borra</td>
+</tr>
+<tr class="even">
+<td><strong>Analista-Finanzas</strong></td>
+<td>Contabilidad y tesorería</td>
+<td>grp_fin_analyst</td>
+<td>ERP, Pagos</td>
+<td>Crea órdenes, no aprueba</td>
+</tr>
+<tr class="odd">
+<td><strong>Aprobador-Pagos</strong></td>
+<td>Nivel de aprobación</td>
+<td>grp_pay_approver</td>
+<td>Pagos</td>
+<td>Aprueba hasta $10k</td>
+</tr>
+<tr class="even">
+<td><strong>Admin-Infra</strong></td>
+<td>Infraestructura limitada</td>
+<td>grp_admin_infra</td>
+<td>AD, VMWare</td>
+<td>Admin por segmento</td>
+</tr>
+<tr class="odd">
+<td><strong>Lector-Auditor</strong></td>
+<td>Solo lectura auditoría</td>
+<td>grp_audit_read</td>
+<td>SIEM, ERP</td>
+<td>Exportar reportes</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo narrativo</p>
+<p>Un <strong>Analista-Finanzas</strong> puede crear órdenes de pago en el ERP, pero no aprobarlas. La aprobación corresponde a un <strong>Aprobador-Pagos</strong>. De esta forma, se cumple la <strong>separación de funciones (SoD)</strong>: nadie controla el proceso completo de creación y aprobación.</p>
+<hr>
+<p><em>Reglas ABAC (ejemplo)</em></p>
+<ul>
+<li><strong>Atributos comunes:</strong> <code>departamento</code>, <code>ubicación</code>, <code>nivel_riesgo_dispositivo</code>, <code>horario_laboral</code>.</li>
+<li><strong>Política:</strong> <em>“Usuarios del departamento Pagos, conectados desde dispositivos corporativos seguros y en horario 08:00–19:00 (Ecuador), pueden aprobar hasta $10k. Fuera de ese horario se exige MFA reforzado y segunda aprobación.”</em></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="separación-de-funciones-sod" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="separación-de-funciones-sod"><span class="header-section-number">2.2</span> Separación de funciones (SoD)</h2>
+<p>La <strong>Separación de Funciones (SoD)</strong> es un principio de control interno que busca <strong>evitar que una sola persona tenga control completo sobre un proceso crítico</strong>.<br>
+</p>
+<p>Se aplica especialmente en el sector financiero, donde el riesgo de fraude interno o errores no detectados es alto.</p>
+<p><strong>Objetivo principal:</strong> reducir la probabilidad de fraudes, abusos de privilegios o errores al dividir las tareas críticas entre <strong>múltiples roles independientes</strong>.</p>
+<p>Ejemplo:</p>
+<p><strong>Gestión de usuarios en Active Directory (IdP):</strong></p>
+<ul>
+<li><p><em>Talento Humano</em> comunica el alta/baja de personal.</p></li>
+<li><p><em>TI</em> crea o elimina la cuenta.</p></li>
+<li><p><em>Auditoría</em> revisa periódicamente que los accesos sean correctos.<br>
+</p></li>
+</ul>
+<p>De este modo, TI no puede crear usuarios sin autorización y Auditoría detecta cuentas indebidas.</p>
+<hr>
+</section>
+<section id="proceso-jml-joinermoverleaver" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="proceso-jml-joinermoverleaver"><span class="header-section-number">2.3</span> <em>Proceso JML (Joiner–Mover–Leaver)</em></h2>
+<p>El <strong>proceso JML</strong> es un marco para gestionar de manera segura el <strong>ciclo de vida de las identidades</strong> dentro de una organización.<br>
+</p>
+<p>El nombre proviene de las siglas en inglés:</p>
+<ul>
+<li><strong>Joiner (alta):</strong> cuando entra un nuevo empleado, Talento Humano activa el proceso → TI crea la cuenta en el IdP → Seguridad asigna el rol mínimo necesario.<br>
+</li>
+<li><strong>Mover (cambio de rol):</strong> si un Analista pasa a Jefe, se retiran los permisos de Analista y se asignan los nuevos; nunca deben coexistir.<br>
+</li>
+<li><strong>Leaver (baja):</strong> cuando un usuario sale de la organización o termina su contrato. Su cuenta debe ser deshabilitada de inmediato para evitar accesos indebidos.</li>
+</ul>
+</section>
+<section id="acceso-a-recursos-y-puertos" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="acceso-a-recursos-y-puertos"><span class="header-section-number">2.4</span> <strong>Acceso a Recursos y Puertos</strong></h2>
+<p>La correcta gestión de accesos a protocolos y servicios es un control esencial exigido en normativas como PCI DSS v4.0 (Req. 7 y 1.2.6), ISO/IEC 27001 (A.9.1.2), y buenas prácticas como CIS Control 6 y NIST CSF. La asignación de servicios debe basarse en el rol del usuario y en el principio de mínimo privilegio.</p>
+<p>Esto asegura que cada rol tenga visibilidad únicamente de lo que necesita, evitando ataques de pivoting, fuga de información y accesos no autorizados.</p>
+<p>A continuación, se presenta una tabla de referencia con protocolos y servicios más comunes, indicando cuándo deben estar permitidos, cuándo deben bloquearse y cuál es la justificación:</p>
+<section id="tabla-de-accesos-permitidos-y-denegados" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="tabla-de-accesos-permitidos-y-denegados"><span class="header-section-number">2.4.1</span> <em>Tabla de Accesos Permitidos y Denegados</em></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 24%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Protocolo / Servicio</th>
+<th>Acceso Permitido</th>
+<th>Acceso Denegado</th>
+<th>Justificación / Riesgo Asociado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HTTP (80)</strong></td>
+<td>Solo para redirección automática a HTTPS y en servidores públicos en DMZ</td>
+<td>Denegado en endpoints internos</td>
+<td>El tráfico en claro expone credenciales y datos sensibles a sniffing.</td>
+</tr>
+<tr class="even">
+<td><strong>HTTPS (443)</strong></td>
+<td>Acceso a portales internos, core bancario y servicios autorizados</td>
+<td>Denegado a sitios no relacionados con la operación (ej. redes sociales, streaming)</td>
+<td>Cifrado robusto para transacciones; bloqueo reduce riesgos de fuga de información.</td>
+</tr>
+<tr class="odd">
+<td><strong>SMTP (25/587)</strong></td>
+<td>Solo servidores de correo autorizados en DMZ</td>
+<td>Denegado en endpoints de usuarios finales</td>
+<td>Evita que equipos comprometidos actúen como spammers o botnets.</td>
+</tr>
+<tr class="even">
+<td><strong>IMAP/POP3 (143/110/993/995)</strong></td>
+<td>Solo clientes corporativos con TLS habilitado</td>
+<td>Denegado en usuarios no autorizados</td>
+<td>Acceso controlado a buzones institucionales; bloqueo evita filtración de correos.</td>
+</tr>
+<tr class="odd">
+<td><strong>DNS (53)</strong></td>
+<td>Permitido solo hacia servidores DNS corporativos</td>
+<td>Denegado hacia DNS externos (Google, OpenDNS, etc.)</td>
+<td>DNS Filtering protege contra spoofing y phishing.</td>
+</tr>
+<tr class="even">
+<td><strong>RDP (3389)</strong></td>
+<td>Permitido únicamente a administradores desde redes de gestión seguras con MFA</td>
+<td>Denegado en usuarios finales</td>
+<td>RDP expuesto es vector común de ransomware y fuerza bruta.</td>
+</tr>
+<tr class="odd">
+<td><strong>SSH (22)</strong></td>
+<td>Permitido solo a administradores mediante llaves/certificados desde redes de TI</td>
+<td>Denegado en usuarios comunes</td>
+<td>Autenticación por password en SSH es altamente vulnerable.</td>
+</tr>
+<tr class="even">
+<td><strong>FTP/SFTP (21/22)</strong></td>
+<td>Permitido únicamente en servidores de transferencia seguros, con logging</td>
+<td>Denegado en endpoints de usuarios</td>
+<td>FTP en claro es inseguro; incluso SFTP debe restringirse para evitar exfiltración.</td>
+</tr>
+<tr class="odd">
+<td><strong>Base de datos (1433 – SQL Server, 1521 – Oracle, 3306 – MySQL, etc.)</strong></td>
+<td>Solo conexiones entre aplicaciones autorizadas y BD en segmentos internos</td>
+<td>Denegado en endpoints de usuarios y en redes abiertas</td>
+<td>Usuarios no deben acceder directamente a bases de datos; toda consulta debe ir vía aplicaciones o APIs.</td>
+</tr>
+<tr class="even">
+<td><strong>ICMP (Ping)</strong></td>
+<td>Permitido únicamente para monitoreo desde herramientas de red autorizadas</td>
+<td>Denegado en usuarios finales</td>
+<td>ICMP puede usarse para reconocimiento y túneles encubiertos.</td>
+</tr>
+<tr class="odd">
+<td><strong>Telnet (23)</strong></td>
+<td>No permitido en ningún caso</td>
+<td>Totalmente bloqueado</td>
+<td>Protocolo obsoleto, transmite credenciales en claro.</td>
+</tr>
+<tr class="even">
+<td><strong>SNMP v1/v2</strong></td>
+<td>No permitido, reemplazado por SNMPv3 con autenticación y cifrado</td>
+<td>Totalmente bloqueado</td>
+<td>Versión insegura, expone información sensible de red.</td>
+</tr>
+<tr class="odd">
+<td><strong>Servicios web/API</strong></td>
+<td>Acceso limitado por rol, autenticación fuerte (OAuth2, mTLS)</td>
+<td>Bloqueo de accesos externos no autorizados</td>
+<td>APIs son puntos críticos de integración; deben estar en DMZ y protegidas por WAF/API Gateway.</td>
+</tr>
+<tr class="even">
+<td><strong>Acceso a dominios</strong></td>
+<td>Dominios institucionales, proveedores financieros, sitios de soporte autorizado</td>
+<td>Redes sociales, pornografía, descargas P2P, streaming, sitios de juegos</td>
+<td>Bloqueo evita pérdida de productividad, malware y fuga de datos.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="aspectos-legales-en-la-gestión-de-usuarios" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="aspectos-legales-en-la-gestión-de-usuarios"><span class="header-section-number">2.5</span> <strong>Aspectos Legales en la Gestión de Usuarios</strong></h2>
+<p>En el sector financiero, la gestión de usuarios no es únicamente un asunto técnico: tiene un fuerte componente legal y contractual. Cada acceso asignado a un empleado, proveedor o externo implica una <strong>responsabilidad jurídica</strong> para la institución, ya que involucra el tratamiento de datos personales, financieros y transaccionales.</p>
+<section id="fundamento-normativo" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="fundamento-normativo"><span class="header-section-number">2.5.1</span> <strong>Fundamento Normativo</strong></h3>
+<ul>
+<li><p><strong>Ley Orgánica de Protección de Datos Personales (LOPDP – Ecuador, 2021):</strong> exige que todo tratamiento de datos tenga base legal, finalidad legítima, consentimiento informado y medidas de seguridad proporcionales.</p></li>
+<li><p><strong>ISO/IEC 27001 (A.9 – Control de Acceso):</strong> establece que los accesos deben ser autorizados formalmente, revisados periódicamente y retirados cuando ya no son necesarios.</p></li>
+<li><p><strong>PCI DSS v4.0 (Requisito 7):</strong> obliga a restringir el acceso a sistemas y datos de tarjetas únicamente a personas que lo requieran por funciones laborales.</p></li>
+<li><p><strong>NIST CSF – Protect (PR.AC):</strong> destaca la importancia de gestionar identidades y credenciales con trazabilidad.</p></li>
+</ul>
+</section>
+<section id="obligaciones-para-usuarios-internos" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="obligaciones-para-usuarios-internos"><span class="header-section-number">2.5.2</span> <em>Obligaciones para Usuarios Internos</em></h3>
+<ul>
+<li><p>Todo contrato laboral debe contener cláusulas de:</p>
+<ul>
+<li><p><strong>Confidencialidad</strong>, asegurando que el empleado no divulgará información sensible obtenida durante su labor.</p></li>
+<li><p><strong>Uso aceptable de recursos</strong>, especificando que los sistemas, correos y dispositivos corporativos pueden ser monitoreados y auditados.</p></li>
+<li><p><strong>Aceptación de pruebas de seguridad</strong>, indicando que las cuentas de usuario pueden ser incluidas en auditorías técnicas, pruebas de pentesting o ejercicios de red team, siempre bajo protocolos internos controlados.</p></li>
+</ul></li>
+<li><p>Debe existir un <strong>registro documental de accesos asignados</strong> a cada usuario, con evidencia de su autorización.</p></li>
+<li><p>El incumplimiento de las políticas de seguridad debe estar tipificado como falta disciplinaria, con sanciones claras.</p></li>
+</ul>
+</section>
+<section id="obligaciones-para-proveedores-y-externos" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="obligaciones-para-proveedores-y-externos"><span class="header-section-number">2.5.3</span> <strong>Obligaciones para Proveedores y Externos</strong></h3>
+<ul>
+<li><p>Los proveedores con acceso a sistemas financieros deben firmar:</p>
+<ul>
+<li><p><strong>Acuerdos de confidencialidad (NDA).</strong></p></li>
+<li><p><strong>Contratos con cláusulas de seguridad</strong>, que definan alcance, duración y tipo de accesos autorizados.</p></li>
+<li><p><strong>Compromisos de auditoría y supervisión</strong>, permitiendo a la institución revisar logs y monitorear sus actividades.</p></li>
+</ul></li>
+<li><p>Todo acceso de terceros debe ser <strong>temporal, controlado y registrado</strong>, evitando cuentas permanentes o genéricas.</p></li>
+</ul>
+</section>
+<section id="riesgos-legales-sin-control" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="riesgos-legales-sin-control"><span class="header-section-number">2.5.4</span> <strong>Riesgos Legales sin Control</strong></h3>
+<p>La falta de medidas legales y contractuales adecuadas puede derivar en:</p>
+<ul>
+<li><p>Demandas de empleados si consideran que su privacidad fue vulnerada durante una prueba de seguridad.</p></li>
+<li><p>Multas de la Autoridad de Protección de Datos si se evidencia tratamiento indebido de información personal.</p></li>
+<li><p>Responsabilidad solidaria frente a clientes si un proveedor externo comete fraude utilizando credenciales autorizadas.</p></li>
+<li><p>Pérdida de trazabilidad en caso de auditorías externas, dificultando demostrar cumplimiento regulatorio.</p></li>
+</ul>
+</section>
+<section id="tabla-de-referencia-aspectos-legales-en-la-gestión-de-usuarios" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="tabla-de-referencia-aspectos-legales-en-la-gestión-de-usuarios"><span class="header-section-number">2.5.5</span> <strong>Tabla de Referencia – Aspectos Legales en la Gestión de Usuarios</strong></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 21%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situación</th>
+<th>Medida Legal/Contractual</th>
+<th>Normativa de Referencia</th>
+<th>Riesgo si no se aplica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Empleados acceden a datos personales</strong></td>
+<td>Contrato con cláusula de confidencialidad y uso aceptable</td>
+<td>LOPDP – Art. 9, ISO/IEC 27001 A.9</td>
+<td>Posible divulgación de información sensible; sanciones legales.</td>
+</tr>
+<tr class="even">
+<td><strong>Inclusión de usuarios en pruebas de seguridad</strong></td>
+<td>Cláusula contractual de aceptación de auditorías y pentesting</td>
+<td>LOPDP – Principio de consentimiento informado</td>
+<td>Demandas por vulneración de derechos de privacidad.</td>
+</tr>
+<tr class="odd">
+<td><strong>Acceso de proveedores externos</strong></td>
+<td>NDA + contrato con cláusulas de seguridad, cuentas temporales</td>
+<td>ISO/IEC 27036-3, PCI DSS Req. 12.8</td>
+<td>Riesgo de fraude o fuga de datos por terceros.</td>
+</tr>
+<tr class="even">
+<td><strong>Cuentas inactivas o huérfanas</strong></td>
+<td>Procedimiento documentado de baja de accesos</td>
+<td>ISO/IEC 27001 A.9.2.6</td>
+<td>Uso indebido de cuentas olvidadas para intrusión.</td>
+</tr>
+<tr class="odd">
+<td><strong>Auditoría de accesos</strong></td>
+<td>Registro formal de autorizaciones y revisiones periódicas</td>
+<td>NIST CSF PR.AC, PCI DSS Req. 10</td>
+<td>Imposibilidad de demostrar cumplimiento en caso de incidente.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="aspectos-legales-en-pentesting-y-auditorías-de-seguridad" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="aspectos-legales-en-pentesting-y-auditorías-de-seguridad"><span class="header-section-number">2.6</span> <strong>Aspectos Legales en Pentesting y Auditorías de Seguridad</strong></h2>
+<p>Las pruebas de seguridad son necesarias para validar la robustez de la infraestructura financiera frente a ataques reales, pero su ejecución sin un marco legal adecuado puede implicar responsabilidades para la institución. Por ello, deben regularse mediante documentación formal, aprobaciones internas y contratos específicos con los proveedores o equipos internos que las realicen.</p>
+<p><strong>Elementos clave a considerar:</strong></p>
+<ul>
+<li><p><strong>Scope of Work (SOW):</strong></p>
+<ul>
+<li>Documento que define claramente el <strong>alcance de la prueba</strong>, qué sistemas serán evaluados, qué técnicas están permitidas (ej. pruebas de fuerza bruta controlada, inyección SQL, explotación de vulnerabilidades), y qué entornos quedan fuera (ej. sistemas en producción que contengan datos sensibles si no hay autorización explícita).</li>
+<li>Debe estar firmado por la institución y por el proveedor o equipo interno de pentesting.</li>
+</ul></li>
+<li><p><strong>Limitaciones y exclusiones:</strong></p>
+<ul>
+<li><p>Se deben establecer límites técnicos claros para proteger los servicios críticos (ej. cajeros automáticos en producción, sistemas core bancarios).</p></li>
+<li><p>En caso de necesitar pruebas sobre sistemas productivos, deben realizarse en ventanas controladas y con planes de contingencia.</p></li>
+</ul></li>
+<li><p><strong>Confidencialidad:</strong></p>
+<ul>
+<li><p>Todo hallazgo pertenece exclusivamente a la institución financiera.</p></li>
+<li><p>El equipo de pentesting debe firmar un <strong>Acuerdo de Confidencialidad (NDA)</strong> que prohíba divulgar, usar o compartir la información detectada fuera del contrato.</p></li>
+</ul></li>
+<li><p><strong>Protección de usuarios y clientes:</strong></p>
+<ul>
+<li><p>Las pruebas no deben exponer datos personales reales de empleados o clientes sin consentimiento explícito, en cumplimiento de la <strong>LOPDP</strong>.</p></li>
+<li><p>Si se utilizan cuentas de usuarios reales, estos deben ser informados previamente en la política contractual de la institución.</p></li>
+</ul></li>
+<li><p><strong>Responsabilidad y seguros:</strong></p>
+<ul>
+<li><p>El contrato debe especificar responsabilidades en caso de daño accidental a la infraestructura o interrupción del servicio.</p></li>
+<li><p>Algunos proveedores deben contar con seguros de responsabilidad civil en ciberseguridad.</p></li>
+</ul></li>
+</ul>
+<section id="tabla-de-referencia-aspectos-legales-en-pentesting" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="tabla-de-referencia-aspectos-legales-en-pentesting"><span class="header-section-number">2.6.1</span> <strong>Tabla de Referencia – Aspectos Legales en Pentesting</strong></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento Legal</th>
+<th>Descripción</th>
+<th>Normativa de Referencia</th>
+<th>Riesgo si no se aplica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Scope of Work (SOW)</strong></td>
+<td>Documento firmado con alcance, técnicas permitidas y exclusiones</td>
+<td>ISO/IEC 27001 A.18.2.3, Buenas prácticas OWASP</td>
+<td>Pruebas mal definidas que afecten sistemas críticos en producción</td>
+</tr>
+<tr class="even">
+<td><strong>NDA firmado</strong></td>
+<td>Garantiza la confidencialidad de hallazgos y datos accedidos</td>
+<td>LOPDP Ecuador, ISO/IEC 27701</td>
+<td>Filtración de vulnerabilidades o datos a terceros</td>
+</tr>
+<tr class="odd">
+<td><strong>Limitaciones técnicas</strong></td>
+<td>Definición de qué no se debe tocar (ej. core bancario en horario productivo)</td>
+<td>NIST CSF PR.IP-12</td>
+<td>Interrupción de servicios críticos por pruebas invasivas</td>
+</tr>
+<tr class="even">
+<td><strong>Protección de usuarios</strong></td>
+<td>Consentimiento contractual para incluir cuentas reales en pruebas</td>
+<td>LOPDP – Principio de consentimiento informado</td>
+<td>Demandas de empleados o clientes por vulneración de privacidad</td>
+</tr>
+<tr class="odd">
+<td><strong>Responsabilidad civil</strong></td>
+<td>Contrato establece responsabilidades y seguros de proveedor</td>
+<td>Directrices Superintendencia de Bancos</td>
+<td>Institución asume sola los daños ocasionados en pruebas</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="resumen" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="resumen"><span class="header-section-number">2.7</span> <strong>Resumen</strong></h2>
+<section id="checklist-de-verificación-y-riesgos-asociados" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="checklist-de-verificación-y-riesgos-asociados"><span class="header-section-number">2.7.1</span> <strong>Checklist de Verificación y Riesgos Asociados</strong></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 39%">
+<col style="width: 9%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Control a Verificar</th>
+<th>Descripción / Evidencia Requerida</th>
+<th>Responsable</th>
+<th>Riesgo si no se cumple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Principio de mínimo privilegio aplicado</strong></td>
+<td>Cada rol tiene definidos únicamente los accesos indispensables. Matriz de accesos actualizada.</td>
+<td>Seguridad / TI</td>
+<td>Privilegios excesivos que permiten abuso interno o explotación de cuentas comprometidas.</td>
+</tr>
+<tr class="even">
+<td><strong>Zero Trust implementado en accesos</strong></td>
+<td>Accesos validados siempre mediante MFA, segmentación y monitoreo.</td>
+<td>Seguridad / TI</td>
+<td>Un atacante con credenciales válidas accede libremente a múltiples sistemas.</td>
+</tr>
+<tr class="odd">
+<td><strong>Directorio centralizado (AD/LDAP) en uso</strong></td>
+<td>Usuarios gestionados en OU, con GPO aplicadas (cifrado de discos, bloqueo de pantallas, etc.).</td>
+<td>TI</td>
+<td>Cuentas locales no controladas, proliferación de accesos no trazables.</td>
+</tr>
+<tr class="even">
+<td><strong>Revisión periódica de cuentas inactivas</strong></td>
+<td>Auditoría trimestral y eliminación de cuentas huérfanas o no utilizadas.</td>
+<td>Seguridad / Cumplimiento</td>
+<td>Uso indebido de cuentas olvidadas para intrusión.</td>
+</tr>
+<tr class="odd">
+<td><strong>Roles clasificados según área</strong></td>
+<td>Operativos, administrativos, TI, seguridad, directivos y externos documentados con accesos específicos.</td>
+<td>Cumplimiento / RRHH</td>
+<td>Confusión en permisos, exposición innecesaria de datos sensibles.</td>
+</tr>
+<tr class="even">
+<td><strong>Protocolos inseguros bloqueados</strong></td>
+<td>Verificación de bloqueo de Telnet, FTP, SNMPv1, ICMP general en endpoints.</td>
+<td>TI</td>
+<td>Uso de protocolos inseguros para ataques de pivoting, sniffing o exfiltración de datos.</td>
+</tr>
+<tr class="odd">
+<td><strong>Restricción de servicios críticos</strong></td>
+<td>Bases de datos y aplicaciones accesibles solo vía aplicaciones o APIs, no directamente por usuarios.</td>
+<td>TI / DBA</td>
+<td>Consultas no autorizadas a datos financieros o personales, fuga de información.</td>
+</tr>
+<tr class="even">
+<td><strong>Control de acceso a dominios</strong></td>
+<td>Acceso permitido solo a sitios institucionales y de negocio; bloqueo de redes sociales, streaming y pornografía.</td>
+<td>Seguridad / TI</td>
+<td>Riesgo de fuga de datos, pérdida de productividad y malware por navegación insegura.</td>
+</tr>
+<tr class="odd">
+<td><strong>Contratos laborales con cláusulas de seguridad</strong></td>
+<td>Documentación contractual con confidencialidad, uso aceptable y aceptación de pruebas de seguridad.</td>
+<td>RRHH / Legal</td>
+<td>Demandas de empleados por uso indebido de información o accesos no informados.</td>
+</tr>
+<tr class="even">
+<td><strong>Acuerdos de confidencialidad (NDA) firmados</strong></td>
+<td>Proveedores externos y consultores con NDA vigente antes de recibir accesos.</td>
+<td>Legal / Compras</td>
+<td>Proveedor puede divulgar vulnerabilidades o datos sin responsabilidad legal.</td>
+</tr>
+<tr class="odd">
+<td><strong>Scope of Work (SOW) firmado en pruebas de seguridad</strong></td>
+<td>Documento formal con alcance, técnicas permitidas, exclusiones y responsabilidades.</td>
+<td>Seguridad / Legal</td>
+<td>Pentesting fuera de alcance que afecte sistemas críticos en producción.</td>
+</tr>
+<tr class="even">
+<td><strong>Protección de usuarios en pruebas de seguridad</strong></td>
+<td>Consentimiento contractual para uso de cuentas reales en pentesting; anonimización de datos en pruebas.</td>
+<td>Cumplimiento / Seguridad</td>
+<td>Demandas de usuarios o clientes por vulneración de la privacidad durante auditorías.</td>
+</tr>
+<tr class="odd">
+<td><strong>Registro y trazabilidad de accesos</strong></td>
+<td>Logs de creación, modificación y eliminación de usuarios; evidencia de auditorías periódicas.</td>
+<td>Seguridad / TI</td>
+<td>Falta de trazabilidad ante incidentes o incumplimiento en auditorías regulatorias.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="riesgos-globales-asociados-a-la-mala-gestión-de-usuarios" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="riesgos-globales-asociados-a-la-mala-gestión-de-usuarios"><span class="header-section-number">2.7.2</span> Riesgos Globales Asociados a la Mala Gestión de Usuarios</h3>
+<p>Riesgo de abuso interno: empleados con privilegios innecesarios pueden manipular datos financieros o extraer información confidencial.</p>
+<p>Intrusión externa facilitada: credenciales comprometidas permiten accesos amplios si no se aplica mínimo privilegio ni Zero Trust.</p>
+<p>Incumplimiento normativo: la ausencia de controles documentados puede generar sanciones bajo la LOPDP y regulaciones de la Superintendencia de Bancos.</p>
+<p>Demandas legales: usuarios internos o externos pueden demandar a la institución si se sienten vulnerados en su privacidad durante auditorías o pentesting.</p>
+<p>Fuga de información crítica: accesos mal gestionados pueden derivar en robo de datos de clientes, afectando la confianza y reputación institucional.</p>
+<p>Fraude financiero: cuentas huérfanas o accesos de proveedores no controlados pueden ser aprovechados para fraudes electrónicos.</p>
+<p>Recomendaciones propias para definir un rol.</p>
+<ul>
+<li><p>Los roles deben estar <strong>alineados a las funciones del negocio</strong>.</p></li>
+<li><p>Se debe evitar roles “demasiado amplios” o “genéricos”.</p></li>
+<li><p>Se debe garantizar la <strong>segregación de funciones</strong> (ejemplo: quien aprueba un pago no debe ser el mismo que lo ejecuta).</p></li>
+</ul>
+</section>
+</section>
+<section id="política-de-accesos-por-rol" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="política-de-accesos-por-rol"><span class="header-section-number">2.8</span> Política de Accesos por Rol</h2>
+<section id="roles-operativos-front-office-y-atención-al-cliente" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="roles-operativos-front-office-y-atención-al-cliente"><span class="header-section-number">2.8.1</span> Roles Operativos (Front-Office y Atención al Cliente)</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Roles Operativos</td>
+<td>Cajero Bancario</td>
+<td>80, 443 (HTTP/HTTPS), 25/587 (SMTP)</td>
+<td>22 (SSH), 21 (FTP), 22 (SFTP), 1433/3306/1521 (DB), 445 (SMB)</td>
+<td>Core Bancario, Correo</td>
+<td>AD, SIEM, Carpetas compartidas</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Cajeros</td>
+<td>Solo usa Core vía web. SSH y DB bloqueados (consultas vía Core). FTP/SFTP bloqueados para evitar fuga.</td>
+</tr>
+<tr class="even">
+<td>Roles Operativos</td>
+<td>Oficial de Servicio al Cliente</td>
+<td>80, 443, 25/587</td>
+<td>22, 21, DB directos, 445</td>
+<td>CRM, Correo corporativo, Intranet</td>
+<td>Core bancario, SIEM</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Atención</td>
+<td>Acceso a CRM e intranet. SSH/DB bloqueados (no administra servidores).</td>
+</tr>
+<tr class="odd">
+<td>Roles Operativos</td>
+<td>Ejecutivo de Negocios / Asesor Comercial</td>
+<td>80, 443, 25/587</td>
+<td>22, 21, DB directos, 445</td>
+<td>ERP, CRM financiero</td>
+<td>Core bancario, SIEM</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Ejecutivos</td>
+<td>Acceso a ERP; sin acceso a DB ni a infraestructura TI.</td>
+</tr>
+<tr class="even">
+<td>Roles Operativos</td>
+<td>Personal de Call Center / Contact Center</td>
+<td>80, 443, 5060/5061 (VoIP)</td>
+<td>22, 21, DB directos, 445</td>
+<td>CRM, Telefonía IP</td>
+<td>Core bancario, ERP</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Call Center</td>
+<td>Solo CRM y VoIP. DB bloqueadas para evitar exposición indebida.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="roles-administrativos-y-de-apoyo-middle-office" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="roles-administrativos-y-de-apoyo-middle-office"><span class="header-section-number">2.8.2</span> Roles Administrativos y de Apoyo (Middle-Office)</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Middle-Office</td>
+<td>Analista de Crédito / Riesgo Crediticio</td>
+<td>80, 443, 25/587</td>
+<td>22, 21, DB directos</td>
+<td>ERP financiero, scoring</td>
+<td>Infra TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Finanzas</td>
+<td>Procesa créditos vía ERP. DB bloqueadas; consultas deben pasar por ERP.</td>
+</tr>
+<tr class="even">
+<td>Middle-Office</td>
+<td>Contador / Finanzas</td>
+<td>80, 443, 25/587</td>
+<td>22, 21, DB directos</td>
+<td>ERP contable, Nómina</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Finanzas</td>
+<td>Accede a ERP contable. SSH/DB bloqueados por seguridad.</td>
+</tr>
+<tr class="odd">
+<td>Middle-Office</td>
+<td>Talento Humano (RRHH)</td>
+<td>80, 443, 25/587</td>
+<td>22, 21, DB directos</td>
+<td>HRM, Nómina</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN RRHH</td>
+<td>Solo HRM. Maneja datos sensibles (LOPDP).</td>
+</tr>
+<tr class="even">
+<td>Middle-Office</td>
+<td>Área de Cumplimiento / Legal</td>
+<td>80, 443</td>
+<td>22, 21, DB directos</td>
+<td>AML/PLD, Reportes regulatorios</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Compliance</td>
+<td>Acceso a sistemas regulatorios. DB bloqueadas.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="roles-tecnológicos-ti-e-infraestructura" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="roles-tecnológicos-ti-e-infraestructura"><span class="header-section-number">2.8.3</span> Roles Tecnológicos (TI e Infraestructura)</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TI</td>
+<td>Usuario Estándar de TI</td>
+<td>80, 443</td>
+<td>22, 21, DB directos</td>
+<td>Helpdesk, Ticketing</td>
+<td>Producción TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN TI usuarios</td>
+<td>Acceso básico a helpdesk. No administra infraestructura.</td>
+</tr>
+<tr class="even">
+<td>TI</td>
+<td>Soporte Técnico / Mesa de Ayuda</td>
+<td>80, 443, 3389 (RDP), 22 (SSH limitado)</td>
+<td>DB productivas</td>
+<td>Soporte remoto, Escritorios</td>
+<td>Core bancario, Producción crítica</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Soporte</td>
+<td>Escritorios vía Jump Server. DB bloqueadas.</td>
+</tr>
+<tr class="odd">
+<td>TI</td>
+<td>Administrador de Redes e Infraestructura</td>
+<td>22, 443, 161 (SNMP), VPN</td>
+<td>DB apps</td>
+<td>Switches, Routers, Firewalls</td>
+<td>Core apps</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Infraestructura, IP fija</td>
+<td>Gestiona red y conectividad. SSH solo desde IP autorizada.</td>
+</tr>
+<tr class="even">
+<td>TI</td>
+<td>Administrador de Servidores / Virtualización</td>
+<td>22, 3389, 443, 1521/1433</td>
+<td>Apps usuarios</td>
+<td>Servidores, VM</td>
+<td>Core apps</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Admin</td>
+<td>Administra servidores/VM. Producción bajo auditoría.</td>
+</tr>
+<tr class="odd">
+<td>TI</td>
+<td>Administrador de Aplicaciones (Core/ERP/CRM)</td>
+<td>80, 443, DB app</td>
+<td>SSH</td>
+<td>Core, ERP, CRM</td>
+<td>Infra TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Apps</td>
+<td>Acceso a apps críticas. Sin acceso a infraestructura TI.</td>
+</tr>
+<tr class="even">
+<td>TI</td>
+<td>Administrador de Base de Datos (DBA)</td>
+<td>1433, 1521, 3306, 443</td>
+<td>FTP, Telnet</td>
+<td>Gestión de DB</td>
+<td>Core apps directas</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN DB, IP fija</td>
+<td>Acceso directo a DB (controlado y auditado).</td>
+</tr>
+<tr class="odd">
+<td>TI</td>
+<td>Arquitecto de TI</td>
+<td>80, 443, VPN</td>
+<td>Producción</td>
+<td>Documentación, Dev/Test</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Lab</td>
+<td>Diseña arquitectura y pruebas. Sin acceso a producción.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="roles-de-seguridad-ciberseguridad-y-cumplimiento" class="level3" data-number="2.8.4">
+<h3 data-number="2.8.4" class="anchored" data-anchor-id="roles-de-seguridad-ciberseguridad-y-cumplimiento"><span class="header-section-number">2.8.4</span> Roles de Seguridad (Ciberseguridad y Cumplimiento)</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Seguridad</td>
+<td>Oficial de Seguridad de la Información (CISO/ISO)</td>
+<td>443</td>
+<td>22, DB</td>
+<td>Dashboards, Reportes de seguridad</td>
+<td>Producción TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN CISO</td>
+<td>Responsable de seguridad; no gestiona servidores.</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Analista SOC Nivel 1 (Monitoreo)</td>
+<td>443, puertos SIEM</td>
+<td>22, DB</td>
+<td>SIEM (Wazuh, Splunk)</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN SOC</td>
+<td>Monitorea alertas. Solo lectura.</td>
+</tr>
+<tr class="odd">
+<td>Seguridad</td>
+<td>Analista SOC Nivel 2 (Investigación)</td>
+<td>443, SIEM, IDS</td>
+<td>DB productivas</td>
+<td>Correlación de eventos, IDS</td>
+<td>Producción crítica</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN SOC</td>
+<td>Investiga incidentes. Dev/Test; no producción.</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Analista SOC Nivel 3 (Threat Hunting / DFIR)</td>
+<td>443, IDS/IPS, Threat Intel</td>
+<td>DB directos</td>
+<td>Threat hunting, DFIR</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN SOC avanzada</td>
+<td>Producción solo bajo autorización.</td>
+</tr>
+<tr class="odd">
+<td>Seguridad</td>
+<td>Administrador de Seguridad (Red/Endpoint/SIEM)</td>
+<td>22, 443, puertos SIEM</td>
+<td>DB productivas</td>
+<td>IDS/IPS, EDR, Firewalls</td>
+<td>Core apps</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Seguridad</td>
+<td>Gestiona infraestructura de seguridad.</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Pentester / Red Team</td>
+<td>22, 80, 443 (solo lab)</td>
+<td>Producción, Core</td>
+<td>Laboratorio de pruebas</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Pentest aislada</td>
+<td>Solo entornos de prueba; nunca producción.</td>
+</tr>
+<tr class="odd">
+<td>Seguridad</td>
+<td>Blue Team / DFIR (Forensics &amp; IR)</td>
+<td>443, SIEM, EDR</td>
+<td>Producción directa</td>
+<td>Análisis de logs, Forense</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN DFIR</td>
+<td>Respuesta a incidentes. Producción bajo autorización.</td>
+</tr>
+<tr class="even">
+<td>Seguridad</td>
+<td>Auditor Interno/Externo</td>
+<td>443, VPN controlado</td>
+<td>SSH, DB</td>
+<td>Dashboards de auditoría</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Auditoría</td>
+<td>Acceso temporal, supervisado. Solo lectura.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="roles-directivos-y-estratégicos" class="level3" data-number="2.8.5">
+<h3 data-number="2.8.5" class="anchored" data-anchor-id="roles-directivos-y-estratégicos"><span class="header-section-number">2.8.5</span> Roles Directivos y Estratégicos</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Directivos</td>
+<td>Gerente de Sucursal</td>
+<td>443</td>
+<td>22, DB</td>
+<td>Reportes operativos</td>
+<td>Producción TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Gerencia</td>
+<td>Acceso a reportes; no a sistemas TI.</td>
+</tr>
+<tr class="even">
+<td>Directivos</td>
+<td>Gerente de Operaciones</td>
+<td>443</td>
+<td>22, DB</td>
+<td>Dashboards de operaciones</td>
+<td>Infra TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Operaciones</td>
+<td>Supervisa conciliaciones y operaciones.</td>
+</tr>
+<tr class="odd">
+<td>Directivos</td>
+<td>Gerente Financiero (CFO)</td>
+<td>443</td>
+<td>22, DB</td>
+<td>ERP, dashboards financieros</td>
+<td>Infra TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN CFO</td>
+<td>Reportes financieros. Sin acceso a infra TI.</td>
+</tr>
+<tr class="even">
+<td>Directivos</td>
+<td>Gerente de Riesgos</td>
+<td>443</td>
+<td>22, DB</td>
+<td>Dashboards de riesgos</td>
+<td>Producción TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Riesgos</td>
+<td>Reportes de riesgos. Sin acceso a infra TI.</td>
+</tr>
+<tr class="odd">
+<td>Directivos</td>
+<td>Gerente de TI (CIO/CTO)</td>
+<td>443, VPN</td>
+<td>DB directos</td>
+<td>Reportes TI</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Directivos</td>
+<td>Supervisa TI. No opera sistemas.</td>
+</tr>
+<tr class="even">
+<td>Directivos</td>
+<td>Gerente de Seguridad de la Información (CISO)</td>
+<td>443</td>
+<td>DB directos</td>
+<td>Reportes de seguridad</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Seguridad</td>
+<td>Rol directivo; reportes estratégicos.</td>
+</tr>
+<tr class="odd">
+<td>Directivos</td>
+<td>Director General / Presidencia</td>
+<td>443</td>
+<td>Todo técnico</td>
+<td>Dashboards ejecutivos</td>
+<td>Infra TI</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Presidencia</td>
+<td>Reportes globales. Sin acceso técnico.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="externos" class="level3" data-number="2.8.6">
+<h3 data-number="2.8.6" class="anchored" data-anchor-id="externos"><span class="header-section-number">2.8.6</span> Externos</h3>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>Rol</th>
+<th>Puertos/Servicios Permitidos</th>
+<th>Puertos/Servicios Denegados</th>
+<th>Servicios Permitidos</th>
+<th>Servicios Denegados</th>
+<th>Dominios Permitidos</th>
+<th>Dominios Denegados</th>
+<th>Rango IP / VLAN</th>
+<th>Descripción / Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Externos</td>
+<td>Proveedores Externos (outsourcing, mantenimiento)</td>
+<td>443, VPN temporal</td>
+<td>22, DB</td>
+<td>Acceso puntual contratado</td>
+<td>Producción, Core</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Proveedores</td>
+<td>Acceso temporal. Cuentas desechables y monitoreadas.</td>
+</tr>
+<tr class="even">
+<td>Externos</td>
+<td>Consultores TIC / Seguridad</td>
+<td>443, VPN, Jump Server</td>
+<td>Producción real</td>
+<td>Entornos Dev/Test</td>
+<td>Core bancario</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Consultoría</td>
+<td>Solo Dev/Test. Nunca producción.</td>
+</tr>
+<tr class="odd">
+<td>Externos</td>
+<td>Auditores Externos (financieros o cumplimiento)</td>
+<td>443, VPN controlado</td>
+<td>22, DB</td>
+<td>Dashboards de auditoría</td>
+<td>Producción</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Auditoría</td>
+<td>Acceso temporal, controlado. Solo lectura.</td>
+</tr>
+<tr class="even">
+<td>Externos</td>
+<td>Clientes Invitados (WiFi oficinas)</td>
+<td>80, 443</td>
+<td>Todo interno</td>
+<td>Internet público</td>
+<td>Intranet, Core</td>
+<td>—</td>
+<td>—</td>
+<td>VLAN Invitados</td>
+<td>Solo Internet. Aislado de red interna.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link" aria-label="Unidad: Introducción">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Unidad: Introducción</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Unidad2/indexUnidad2.html" class="pagination-link" aria-label="Unidad : Seguridad en Endpoints (TI y OT)">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Unidad : Seguridad en Endpoints (TI y OT)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
