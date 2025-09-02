@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Unidad: Servidores y Aplicaciones Críticas – Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</title>
+<title>7&nbsp; Unidad 7: Monitoreo y Respuesta ante Incidentes – Guía de Ciberseguridad aplicado al sector Financiero en Ecuador</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Unidad5/indexUnidad5.html" rel="next">
-<link href="../Unidad3/indexUnidad3.html" rel="prev">
+<link href="../Unidad7/indexUnidad7.html" rel="next">
+<link href="../Unidad5/indexUnidad5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad4/indexUnidad4.html">Servidores y Aplicaciones Críticas</a></li><li class="breadcrumb-item"><a href="../Unidad4/indexUnidad4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Unidad: Servidores y Aplicaciones Críticas</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad6/indexUnidad6.html">Monitoreo y Respuesta a Incidentes</a></li><li class="breadcrumb-item"><a href="../Unidad6/indexUnidad6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Unidad 7: Monitoreo y Respuesta ante Incidentes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unidad4/indexUnidad4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Unidad4/indexUnidad4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Unidad: Servidores y Aplicaciones Críticas</span></span></a>
   </div>
 </li>
@@ -212,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Unidad6/indexUnidad6.html" class="sidebar-item-text sidebar-link">
+  <a href="../Unidad6/indexUnidad6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Unidad 7: Monitoreo y Respuesta ante Incidentes</span></span></a>
   </div>
 </li>
@@ -296,25 +296,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#introducción-de-la-unidad" id="toc-introducción-de-la-unidad" class="nav-link active" data-scroll-target="#introducción-de-la-unidad"><span class="header-section-number">5.1</span> <strong>Introducción de la Unidad</strong></a></li>
-  <li><a href="#riesgos-globales-asociados-a-una-mala-administración-de-servidores-y-aplicaciones-críticas." id="toc-riesgos-globales-asociados-a-una-mala-administración-de-servidores-y-aplicaciones-críticas." class="nav-link" data-scroll-target="#riesgos-globales-asociados-a-una-mala-administración-de-servidores-y-aplicaciones-críticas."><span class="header-section-number">5.2</span> <strong>Riesgos Globales Asociados a una mala administración de servidores y aplicaciones críticas.</strong></a></li>
-  <li><a href="#inventario-y-clasificación-de-servidores" id="toc-inventario-y-clasificación-de-servidores" class="nav-link" data-scroll-target="#inventario-y-clasificación-de-servidores"><span class="header-section-number">5.3</span> <strong>Inventario y Clasificación de Servidores</strong></a>
-  <ul class="collapse">
-  <li><a href="#hardening-de-servidores" id="toc-hardening-de-servidores" class="nav-link" data-scroll-target="#hardening-de-servidores"><span class="header-section-number">5.3.1</span> <strong>Hardening de Servidores</strong></a></li>
-  <li><a href="#accesos-y-gestión-de-credenciales" id="toc-accesos-y-gestión-de-credenciales" class="nav-link" data-scroll-target="#accesos-y-gestión-de-credenciales"><span class="header-section-number">5.3.2</span> <strong>Accesos y Gestión de Credenciales</strong></a></li>
-  <li><a href="#segmentación-de-servidores-en-zonas-de-seguridad" id="toc-segmentación-de-servidores-en-zonas-de-seguridad" class="nav-link" data-scroll-target="#segmentación-de-servidores-en-zonas-de-seguridad"><span class="header-section-number">5.3.3</span> <strong>Segmentación de Servidores en Zonas de Seguridad</strong></a></li>
-  <li><a href="#políticas-de-horarios-y-administración" id="toc-políticas-de-horarios-y-administración" class="nav-link" data-scroll-target="#políticas-de-horarios-y-administración"><span class="header-section-number">5.3.4</span> <strong>Políticas de Horarios y Administración</strong></a></li>
-  </ul></li>
-  <li><a href="#checklist-de-servidores-y-aplicaciones-críticas" id="toc-checklist-de-servidores-y-aplicaciones-críticas" class="nav-link" data-scroll-target="#checklist-de-servidores-y-aplicaciones-críticas"><span class="header-section-number">5.4</span> <strong>Checklist de Servidores y Aplicaciones Críticas</strong></a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">7.1</span> Introducción</a></li>
+  <li><a href="#definición-de-logs-y-parámetros-de-monitoreo" id="toc-definición-de-logs-y-parámetros-de-monitoreo" class="nav-link" data-scroll-target="#definición-de-logs-y-parámetros-de-monitoreo"><span class="header-section-number">7.2</span> Definición de Logs y Parámetros de Monitoreo</a></li>
+  <li><a href="#herramientas-y-equipos-de-monitoreo" id="toc-herramientas-y-equipos-de-monitoreo" class="nav-link" data-scroll-target="#herramientas-y-equipos-de-monitoreo"><span class="header-section-number">7.3</span> Herramientas y Equipos de Monitoreo</a></li>
+  <li><a href="#comparativa-de-tecnologías-de-monitoreo-y-respuesta" id="toc-comparativa-de-tecnologías-de-monitoreo-y-respuesta" class="nav-link" data-scroll-target="#comparativa-de-tecnologías-de-monitoreo-y-respuesta"><span class="header-section-number">7.4</span> Comparativa de Tecnologías de Monitoreo y Respuesta</a></li>
+  <li><a href="#tabla-de-software-y-equipos-de-monitoreo-y-respuesta" id="toc-tabla-de-software-y-equipos-de-monitoreo-y-respuesta" class="nav-link" data-scroll-target="#tabla-de-software-y-equipos-de-monitoreo-y-respuesta"><span class="header-section-number">7.5</span> Tabla de Software y Equipos de Monitoreo y Respuesta</a></li>
+  <li><a href="#checklist-de-monitoreo-y-respuesta" id="toc-checklist-de-monitoreo-y-respuesta" class="nav-link" data-scroll-target="#checklist-de-monitoreo-y-respuesta"><span class="header-section-number">7.6</span> Checklist de Monitoreo y Respuesta</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad4/indexUnidad4.html">Servidores y Aplicaciones Críticas</a></li><li class="breadcrumb-item"><a href="../Unidad4/indexUnidad4.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Unidad: Servidores y Aplicaciones Críticas</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Unidad6/indexUnidad6.html">Monitoreo y Respuesta a Incidentes</a></li><li class="breadcrumb-item"><a href="../Unidad6/indexUnidad6.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Unidad 7: Monitoreo y Respuesta ante Incidentes</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Unidad: Servidores y Aplicaciones Críticas</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Unidad 7: Monitoreo y Respuesta ante Incidentes</span></h1>
 </div>
 
 
@@ -331,202 +327,286 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introducción-de-la-unidad" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="introducción-de-la-unidad"><span class="header-section-number">5.1</span> <strong>Introducción de la Unidad</strong></h2>
-<p>Los servidores son el <strong>corazón de la infraestructura tecnológica financiera</strong>: alojan los sistemas de core bancario, las bases de datos de clientes, los ERP y CRM, las aplicaciones de banca en línea, así como los servidores de respaldo, DNS, DHCP y directorios como Active Directory. Una vulnerabilidad o mala práctica en esta capa puede exponer datos financieros, permitir fraudes, comprometer transacciones o dejar inoperativos servicios críticos como cajeros automáticos y banca móvil.</p>
-<p>Normativas internacionales como <strong>ISO/IEC 27001 (Anexo A.8 y A.13)</strong>, <strong>PCI DSS v4.0 (Requisitos 2, 6 y 10)</strong>, <strong>NIST SP 800-123 (Hardening de Servidores)</strong>, y <strong>CIS Benchmarks</strong> establecen que los servidores deben configurarse bajo políticas estrictas de seguridad, con acceso limitado, segmentación, horarios de administración definidos y registros auditables. La <strong>LOPDP (Ecuador, 2021)</strong> añade obligaciones de protección de datos sensibles y trazabilidad de accesos.</p>
-<p>En el sector financiero, los riesgos más frecuentes son:</p>
+<section id="introducción" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">7.1</span> Introducción</h2>
+<p>El monitoreo y la respuesta ante incidentes no se basan únicamente en tener un firewall o un SIEM. Requieren una <strong>infraestructura de equipos, software y políticas de análisis</strong> capaces de identificar amenazas de manera temprana, contenerlas y responder adecuadamente.</p>
+<p>Los equipos de seguridad como <strong>EDR, XDR, HIDS, NIDS o SIEM</strong> son esenciales, pero tienen <strong>limitaciones</strong>:</p>
 <ul>
-<li><p><strong>Puertos y protocolos inseguros habilitados</strong> en servidores expuestos.</p></li>
-<li><p><strong>Servidores sin parches</strong> o con sistemas operativos obsoletos.</p></li>
-<li><p><strong>Cuentas administrativas sin control de horarios ni MFA</strong>, utilizadas para accesos indebidos.</p></li>
-<li><p><strong>Bases de datos expuestas directamente a la red interna</strong>, en lugar de restringirse a consultas vía API.</p></li>
-<li><p><strong>Servidores de respaldo accesibles desde la red de usuarios</strong>, utilizados por atacantes para borrar copias.</p></li>
+<li><p>No pueden detectar todo tipo de ataques si los logs están incompletos.</p></li>
+<li><p>Pueden generar falsos positivos si no hay correlación adecuada.</p></li>
+<li><p>Requieren reglas y políticas definidas según la realidad de la institución financiera.</p></li>
+<li><p>Por ello, antes de configurar cualquier herramienta, es necesario <strong>definir qué eventos son relevantes y qué parámetros de operación normal deben ser registrados y monitoreados</strong>.</p></li>
 </ul>
 </section>
-<section id="riesgos-globales-asociados-a-una-mala-administración-de-servidores-y-aplicaciones-críticas." class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="riesgos-globales-asociados-a-una-mala-administración-de-servidores-y-aplicaciones-críticas."><span class="header-section-number">5.2</span> <strong>Riesgos Globales Asociados a una mala administración de servidores y aplicaciones críticas.</strong></h2>
+<section id="definición-de-logs-y-parámetros-de-monitoreo" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="definición-de-logs-y-parámetros-de-monitoreo"><span class="header-section-number">7.2</span> Definición de Logs y Parámetros de Monitoreo</h2>
+<p>El valor del monitoreo depende de qué se recolecta. En servidores financieros y críticos, deben definirse como base:</p>
 <ul>
-<li><p><strong>Exposición del core bancario y sistemas críticos</strong> por servidores mal segmentados o con puertos inseguros, lo que puede derivar en fraudes, manipulación de transacciones y pérdida de confianza en la institución.</p></li>
-<li><p><strong>Compromiso de bases de datos financieras y personales</strong>, lo que facilita exfiltración de información sensible (nombres, cuentas, tarjetas, historiales crediticios). Este tipo de fuga activa directamente sanciones bajo la <strong>Ley Orgánica de Protección de Datos Personales (LOPDP, Ecuador)</strong> y normativas internacionales como <strong>PCI DSS</strong>.</p></li>
-<li><p><strong>Ataques de ransomware a servidores internos y de respaldo</strong>, provocando interrupciones prolongadas de banca en línea, cajeros automáticos y pagos electrónicos. Esto impacta la <strong>continuidad del negocio</strong>, genera pérdidas económicas directas y puede forzar la suspensión temporal de servicios financieros.</p></li>
-<li><p><strong>Accesos indebidos fuera de horario laboral</strong>, que permanecen indetectados si no existen políticas claras y monitoreo centralizado. Esto habilita a atacantes internos o externos a mantener persistencia en los sistemas.</p></li>
-<li><p><strong>Mala gestión de servidores de seguridad (IDS/IPS, IA, microservicios)</strong> que deberían proteger la red, pero si están mal configurados se convierten en vectores de ataque adicionales.</p></li>
-<li><p><strong>Incumplimiento legal y sanciones regulatorias</strong>:</p>
-<ul>
-<li><p>Bajo la <strong>LOPDP</strong>, las instituciones financieras pueden enfrentar sanciones administrativas, multas económicas proporcionales al daño causado, e incluso la <strong>inhabilitación para procesar datos personales</strong>.</p></li>
-<li><p>Los clientes afectados pueden iniciar <strong>demandas civiles</strong> por daños y perjuicios ocasionados por la pérdida de su información personal o financiera.</p></li>
-<li><p>Una filtración de datos de tarjetas sin cumplimiento de <strong>PCI DSS</strong> puede llevar a la <strong>revocación de licencias para procesar pagos electrónicos</strong>, perdiendo negocios con emisores y adquirentes internacionales.</p></li>
-</ul></li>
-<li><p><strong>Daño reputacional y pérdida de confianza</strong>, que en el sector financiero puede ser devastador: un solo incidente de fuga de datos o caída de servicios puede causar la migración masiva de clientes hacia la competencia, además de perder contratos con aliados estratégicos.</p></li>
+<li><p><strong>Uso de CPU:</strong> mantener en promedio por debajo del <strong>80%</strong>. Valores superiores sostenidos pueden indicar ataques DoS, procesos maliciosos o sobrecarga.</p></li>
+<li><p><strong>Uso de Disco:</strong> espacio libre mínimo del <strong>20%</strong>. Un disco lleno puede detener aplicaciones críticas y es un síntoma común en ransomware.</p></li>
+<li><p><strong>Memoria RAM:</strong> alerta cuando supere el <strong>85-90%</strong> de uso. Puede ser indicio de fuga de memoria en aplicaciones, ejecución de malware o denegación de servicio.</p></li>
+<li><p><strong>Estado de red:</strong> monitoreo de conexiones concurrentes, tráfico inusual, uso de puertos no autorizados.</p></li>
+<li><p><strong>Integridad de archivos críticos:</strong> cambios en <code>/etc/passwd</code> en Linux o en el registro de Windows.</p></li>
+<li><p><strong>Estado de servicios financieros:</strong> disponibilidad de servicios como core bancario, bases de datos, ERP o APIs de clientes.</p></li>
+<li><p><strong>Accesos de usuarios privilegiados:</strong> registros de conexiones SSH, RDP, cuentas de administrador y accesos fuera de horario laboral, registro de acceso fallidos a endpoints y servidores.</p></li>
+<li><p><strong>Accesos fallidos a endpoints y servidores:</strong> intentos repetidos de login fallidos deben generar alertas, ya que pueden indicar ataques de fuerza bruta o credenciales comprometidas.</p></li>
 </ul>
+<p>La ausencia de esta definición genera <strong>alertas irrelevantes o, peor aún, incidentes no detectados</strong>.</p>
 </section>
-<section id="inventario-y-clasificación-de-servidores" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="inventario-y-clasificación-de-servidores"><span class="header-section-number">5.3</span> <strong>Inventario y Clasificación de Servidores</strong></h2>
-<p>Un inventario completo es la base de la seguridad en servidores. Debe incluir:</p>
+<section id="herramientas-y-equipos-de-monitoreo" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="herramientas-y-equipos-de-monitoreo"><span class="header-section-number">7.3</span> Herramientas y Equipos de Monitoreo</h2>
 <ul>
-<li><p>Nombre y <strong>función</strong> (Core Bancario, ERP, BD Clientes, Web Banca, DNS, DHCP, Directorio AD, Microservicios, Servidores de IA, IDS/IPS – ej. Snort/Suricata).</p></li>
-<li><p><strong>Sistema Operativo</strong> (Windows Server, Linux, Unix, etc.) y <strong>versión exacta</strong>.</p></li>
-<li><p><strong>Fecha de último parche aplicado</strong> y frecuencia de actualización.</p></li>
-<li><p>Políticas de contraseñas robustas.</p></li>
-<li><p><strong>Zona de ubicación</strong>: DMZ externa (públicos), DMZ interna (core bancario, bases de datos), DMZ de integración (APIs, middleware), Red de respaldo.</p></li>
-<li><p><strong>Protocolos y puertos habilitados</strong>, con justificación de uso.</p></li>
-<li><p><strong>IPs permitidas y denegadas</strong>, tanto internas como externas.</p></li>
-<li><p><strong>Política de firewall aplicada (# de referencia)</strong> para trazabilidad.</p></li>
-<li><p>Si el servidor <strong>consume recursos externos vía VPN</strong>, especificar: a qué institución, bajo qué reglas, con qué cifrado y trazabilidad.</p></li>
-<li><p><strong>Responsable administrativo y de seguridad</strong> asignado.</p></li>
+<li><p><strong>EDR (Endpoint Detection and Response):</strong> protege y monitorea equipos de usuario y servidores. Detecta malware, anomalías en procesos y accesos indebidos.</p></li>
+<li><p><strong>XDR (Extended Detection and Response):</strong> amplía la visión correlacionando datos de endpoints, red, servidores, nube y dispositivos OT.</p></li>
+<li><p><strong>HIDS (Host Intrusion Detection System):</strong> analiza actividad en un host específico (logs del sistema, cambios de archivos). Ejemplo: OSSEC, Wazuh.</p></li>
+<li><p><strong>NIDS (Network Intrusion Detection System):</strong> monitorea el tráfico de red en tiempo real. Ejemplo: Snort, Suricata.</p></li>
+<li><p><strong>SIEM (Security Information and Event Management):</strong> centraliza logs, correlaciona eventos y genera alertas para el SOC.</p></li>
+<li><p><strong>UEBA (User and Entity Behavior Analytics):</strong> aplica analítica avanzada e IA para detectar comportamientos anómalos de usuarios o sistemas.</p></li>
 </ul>
-<p>Un inventario actualizado asegura control y permite detectar servidores no autorizados o configuraciones obsoletas.</p>
-<section id="hardening-de-servidores" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="hardening-de-servidores"><span class="header-section-number">5.3.1</span> <strong>Hardening de Servidores</strong></h3>
-<p>El hardening asegura que cada servidor tenga la menor superficie de ataque posible:</p>
-<ul>
-<li><p>Deshabilitar protocolos inseguros: Telnet, FTP, ICMP generalizado, SNMPv1/v2.</p></li>
-<li><p>Solo habilitar <strong>puertos mínimos requeridos por la aplicación.</strong></p></li>
-<li><p>Uso de <strong>cifrado TLS 1.3/IPsec</strong> en todas las comunicaciones.</p></li>
-<li><p>Logs locales y de aplicación enviados en tiempo real a un <strong>SIEM central</strong>.</p></li>
-<li><p>Instalación de agentes de seguridad (antivirus, EDR/XDR, HIDS).</p></li>
-<li><p>Verificación periódica de integridad con hashes y control de cambios.</p></li>
-</ul>
+<p>Cada herramienta debe verse como parte de un <strong>ecosistema de monitoreo</strong>, no como una solución aislada.</p>
 </section>
-<section id="accesos-y-gestión-de-credenciales" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="accesos-y-gestión-de-credenciales"><span class="header-section-number">5.3.2</span> <strong>Accesos y Gestión de Credenciales</strong></h3>
-<ul>
-<li><p>Administración remota únicamente por <strong>SSH (con claves o tokens)</strong> o <strong>RDP con MFA</strong>, desde redes de TI autorizadas.</p></li>
-<li><p>Prohibida la autenticación por usuario/contraseña simple.</p></li>
-<li><p>Uso de cuentas estándar con <strong>escalamiento controlado de privilegios</strong> (<code>sudo</code>, Just-in-Time Access).</p></li>
-<li><p>Eliminación periódica de <strong>cuentas huérfanas</strong>.</p></li>
-<li><p>Administración documentada y limitada a <strong>horarios laborales</strong>; accesos fuera de horario solo con autorización especial y registro en SIEM.</p></li>
-</ul>
-</section>
-<section id="segmentación-de-servidores-en-zonas-de-seguridad" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="segmentación-de-servidores-en-zonas-de-seguridad"><span class="header-section-number">5.3.3</span> <strong>Segmentación de Servidores en Zonas de Seguridad</strong></h3>
-<p>Para mantener coherencia en la arquitectura, los servidores deben dividirse en zonas:</p>
-<ul>
-<li><p><strong>DMZ externa:</strong> servidores públicos como web de banca, correo corporativo, aplicativos móviles.</p></li>
-<li><p><strong>DMZ interna:</strong> sistemas críticos (Core Bancario, ERP, bases de datos, servidores de seguridad como IDS/IPS, IA analítica).</p></li>
-<li><p><strong>DMZ de integración:</strong> APIs, middleware y microservicios para consulta segura.</p></li>
-<li><p><strong>Red de respaldo:</strong> exclusiva para servidores de backup, inaccesible desde usuarios finales.</p></li>
-</ul>
-</section>
-<section id="políticas-de-horarios-y-administración" class="level3" data-number="5.3.4">
-<h3 data-number="5.3.4" class="anchored" data-anchor-id="políticas-de-horarios-y-administración"><span class="header-section-number">5.3.4</span> <strong>Políticas de Horarios y Administración</strong></h3>
-<ul>
-<li><p>Administración solo en <strong>ventanas de mantenimiento definidas</strong>.</p></li>
-<li><p>En emergencias fuera de horario, se habilitan políticas temporales con autorización de seguridad.</p></li>
-<li><p>Servicios internos y respaldos también deben ejecutarse en horarios específicos, evitando uso indebido nocturno.</p></li>
-<li><p>Accesos administrativos desde fuera de la institución solo vía <strong>VPN cifrada + MFA</strong>, registrada en SIEM.</p></li>
-</ul>
-</section>
-</section>
-<section id="checklist-de-servidores-y-aplicaciones-críticas" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="checklist-de-servidores-y-aplicaciones-críticas"><span class="header-section-number">5.4</span> <strong>Checklist de Servidores y Aplicaciones Críticas</strong></h2>
+<section id="comparativa-de-tecnologías-de-monitoreo-y-respuesta" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="comparativa-de-tecnologías-de-monitoreo-y-respuesta"><span class="header-section-number">7.4</span> Comparativa de Tecnologías de Monitoreo y Respuesta</h2>
 <div class="table-responsive">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 26%">
-<col style="width: 26%">
+<col style="width: 16%">
+<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 44%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Control / Medida</th>
-<th>Responsable</th>
-<th>Qué revisar / Evidencia</th>
-<th>Riesgo si no se cumple</th>
+<th>Tecnología</th>
+<th>Ventajas</th>
+<th>Limitaciones</th>
+<th>Casos de uso en sector financiero</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Inventario actualizado (función, SO, versión, parches, zona, política de firewall, VPN asociada)</td>
+<td><strong>EDR (Endpoint Detection &amp; Response)</strong></td>
+<td><p>- Protección directa en endpoints.</p>
+<p>- Aísla equipos infectados.</p>
+<p>- Detecta ransomware y malware en tiempo real.</p></td>
+<td><p>- Visión limitada al endpoint.</p>
+<p>- Requiere agentes en cada dispositivo.</p>
+<p>- Genera muchos eventos si no está bien afinado.</p></td>
+<td>Cajeros, PCs de empleados, laptops de gerentes, servidores Windows/Linux críticos. Detectar malware antes de que se propague.</td>
+</tr>
+<tr class="even">
+<td><strong>XDR (Extended Detection &amp; Response)</strong></td>
+<td><p>- Visión unificada de endpoints, red, nube y OT.</p>
+<p>- Correlación automática entre distintos vectores de ataque.</p>
+<p>- Mejor contexto para SOC.</p></td>
+<td><p>- Costos altos en versiones comerciales.</p>
+<p>- Implementación compleja.</p>
+<p>- Open source requiere mucha integración.</p></td>
+<td>Detectar campañas coordinadas (phishing + explotación en servidor + movimiento lateral). Especialmente útil en fraudes bancarios.</td>
+</tr>
+<tr class="odd">
+<td><strong>HIDS (Host Intrusion Detection System)</strong></td>
+<td><p>- Monitorea cambios en archivos y configuraciones.</p>
+<p>- Detecta intrusiones locales y modificaciones sospechosas.</p>
+<p>- Ligero y rápido de implementar.</p></td>
+<td><p>- Solo protege al host donde está instalado.</p>
+<p>- No detecta tráfico de red.</p>
+<p>- No responde automáticamente, solo alerta.</p></td>
+<td>Servidores de bases de datos, core bancario, sistemas críticos. Detectar alteraciones en configuraciones y accesos indebidos.</td>
+</tr>
+<tr class="even">
+<td><strong>NIDS (Network Intrusion Detection System)</strong></td>
+<td><p>- Inspecciona tráfico de red en tiempo real.</p>
+<p>- Detecta ataques conocidos (SQLi, XSS, fuerza bruta, escaneos).</p>
+<p>- Puede cubrir múltiples hosts.</p></td>
+<td><p>- No ve actividad dentro del host.</p>
+<p>- Requiere reglas actualizadas.</p>
+<p>- Puede generar falsos positivos.</p></td>
+<td>Monitoreo de tráfico en DMZ, core bancario y conexiones de proveedores externos. Identificar ataques a portales de banca online.</td>
+</tr>
+<tr class="odd">
+<td><strong>SIEM (Security Information and Event Management)</strong></td>
+<td><p>- Centraliza todos los logs.</p>
+<p>- Permite correlación avanzada.</p>
+<p>- Visibilidad completa para auditorías (LOPDP, PCI DSS).</p></td>
+<td><p>- Costoso y complejo de mantener.</p>
+<p>- Genera alertas masivas si no está bien configurado.</p>
+<p>- Requiere un SOC capacitado.</p></td>
+<td>Obligatorio en instituciones financieras con PCI DSS. Usado para detectar patrones de fraude y ataques internos coordinados.</td>
+</tr>
+<tr class="even">
+<td><strong>UEBA (User and Entity Behavior Analytics)</strong></td>
+<td><p>- Detecta comportamientos anómalos con IA/ML.</p>
+<p>- Identifica amenazas internas.</p>
+<p>- Reduce falsos positivos respecto a reglas estáticas.</p></td>
+<td><p>- Alto costo.</p>
+<p>- Requiere grandes volúmenes de datos.</p>
+<p>- Aún puede dar falsos positivos en contextos nuevos.</p></td>
+<td>Detección de accesos indebidos por usuarios internos o cuentas comprometidas. Ejemplo: empleado accediendo a base de datos fuera de horario.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="tabla-de-software-y-equipos-de-monitoreo-y-respuesta" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="tabla-de-software-y-equipos-de-monitoreo-y-respuesta"><span class="header-section-number">7.5</span> Tabla de Software y Equipos de Monitoreo y Respuesta</h2>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 24%">
+<col style="width: 10%">
+<col style="width: 17%">
+<col style="width: 30%">
+<col style="width: 2%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoría</th>
+<th>¿Qué es?</th>
+<th>Ejemplos Open Source</th>
+<th>Ejemplos Comerciales</th>
+<th>Observación en sector financiero</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>EDR (Endpoint Detection &amp; Response)</strong></td>
+<td>Solución para proteger, detectar y responder en endpoints (PCs, laptops, servidores).</td>
+<td>Wazuh Agent, Velociraptor</td>
+<td>CrowdStrike Falcon, SentinelOne, Microsoft Defender for Endpoint</td>
+<td>Ideal para cajeros, PCs de usuarios y servidores críticos. Aíslan un endpoint infectado antes de que se propague el ataque.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>XDR (Extended Detection &amp; Response)</strong></td>
+<td>Evolución del EDR: correlaciona datos de endpoints, redes, nubes y OT.</td>
+<td>Wazuh + Elastic Stack (con integraciones)</td>
+<td>Palo Alto Cortex XDR, Trend Micro Vision One, Microsoft 365 Defender</td>
+<td>Permite ver campañas de ataque completas (phishing + red + base de datos). Muy útil contra ataques coordinados.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>HIDS (Host Intrusion Detection System)</strong></td>
+<td>Sistema que analiza la actividad y logs de un host específico para detectar cambios sospechosos.</td>
+<td>OSSEC, Wazuh HIDS, Samhain</td>
+<td>McAfee HIDS, Tripwire Enterprise</td>
+<td>Detecta modificaciones en archivos críticos (ej. /etc/passwd) o configuraciones de servidores financieros.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>NIDS (Network Intrusion Detection System)</strong></td>
+<td>Analiza el tráfico de red en tiempo real para detectar intrusiones.</td>
+<td>Snort, Suricata, Zeek</td>
+<td>Cisco Firepower, Palo Alto NGFW con IDS integrado</td>
+<td>Indispensable en DMZ y core bancario. Detecta ataques como SQLi, XSS, fuerza bruta en RDP/SSH o anomalías de red.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>SIEM (Security Information and Event Management)</strong></td>
+<td>Centraliza, correlaciona y analiza logs de sistemas, redes, usuarios y aplicaciones.</td>
+<td>Wazuh, ELK Stack, Graylog</td>
+<td>Splunk, IBM QRadar, ArcSight</td>
+<td>Obligatorio en PCI DSS. Permite tener visibilidad total y correlación de incidentes en toda la infraestructura.</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>UEBA (User and Entity Behavior Analytics)</strong></td>
+<td>Analiza patrones de comportamiento de usuarios y entidades con IA para detectar anomalías.</td>
+<td>Apache Spot, OpenUBA (limitado)</td>
+<td>Exabeam, Securonix, Microsoft Sentinel UEBA</td>
+<td>Detecta accesos anómalos, movimientos laterales y uso indebido de cuentas internas en bancos.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="checklist-de-monitoreo-y-respuesta" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="checklist-de-monitoreo-y-respuesta"><span class="header-section-number">7.6</span> Checklist de Monitoreo y Respuesta</h2>
+<div class="table-responsive">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 32%">
+<col style="width: 11%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento a Revisar</th>
+<th>Detalle / Revisión</th>
+<th>Área Responsable</th>
+<th>Qué ocurre si no se cumple / Por qué es importante</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Definición de parámetros de servidores</td>
+<td>CPU &lt; 80%, RAM &lt; 85%, disco libre &gt; 20%, tráfico de red permitido</td>
 <td>TI / Seguridad</td>
-<td>Registro central de inventario, documentación de roles de servidor, bitácora de actualizaciones</td>
-<td>Servidores no inventariados → activos invisibles con vulnerabilidades sin control</td>
+<td>Sin parámetros, no hay línea base para detectar anomalías</td>
 </tr>
 <tr class="even">
-<td>Estado del Sistema Operativo</td>
-<td>TI</td>
-<td>Confirmar versión soportada por fabricante (Windows Server, Linux, Unix), verificar fin de soporte</td>
-<td>SO obsoleto → falta de parches de seguridad y vectores de ataque conocidos</td>
+<td>Integridad de archivos críticos</td>
+<td>Monitoreo de cambios en configuraciones y sistemas sensibles</td>
+<td>Seguridad / SOC</td>
+<td>Alteraciones maliciosas pasan inadvertidas</td>
 </tr>
 <tr class="odd">
-<td>Parches aplicados y última fecha</td>
-<td>TI</td>
-<td>Logs de actualizaciones, reportes WSUS/Intune/Kaseya</td>
-<td>Parches pendientes → explotación de vulnerabilidades críticas (ej. CVE en bases de datos o RDP)</td>
-</tr>
-<tr class="even">
-<td>Puertos y protocolos mínimos habilitados según función</td>
-<td>TI / Seguridad</td>
-<td>Escaneo con Nmap, revisión de configuración de firewall interno</td>
-<td>Puertos innecesarios → pivoting lateral, fuga de datos, ataques de fuerza bruta</td>
-</tr>
-<tr class="odd">
-<td>Hardening aplicado (Telnet/FTP/ICMP general deshabilitado, SNMPv3 activo, TLS 1.3/IPsec habilitado)</td>
-<td>TI</td>
-<td>Scripts de validación, CIS Benchmark aplicado</td>
-<td>Protocolos inseguros → sniffing, manipulación de tráfico, robo de credenciales</td>
-</tr>
-<tr class="even">
-<td>Administración por SSH/RDP solo con tokens/MFA</td>
-<td>TI / Seguridad</td>
-<td>Configuración de acceso remoto, logs de autenticación, revisión de políticas GPO</td>
-<td>Credenciales robadas → acceso directo a servidores críticos</td>
-</tr>
-<tr class="odd">
-<td>Escalamiento controlado de privilegios (ej. sudo)</td>
-<td>TI</td>
-<td>Configuración en AD, políticas de Just-in-Time Access</td>
-<td>Administradores con acceso permanente → abuso interno, falta de trazabilidad</td>
-</tr>
-<tr class="even">
-<td>Segmentación en DMZs (externa, interna, integración, respaldo)</td>
-<td>Infraestructura</td>
-<td>Diagramas de red, configuración de VLANs, reglas de firewall entre zonas</td>
-<td>Falla de segmentación → ataque a web compromete core bancario o BD</td>
-</tr>
-<tr class="odd">
-<td>Políticas de firewall aplicadas (# de política por servidor)</td>
+<td>Registro de accesos privilegiados</td>
+<td>Logs de SSH, RDP, VPN con horarios y MFA</td>
 <td>Seguridad</td>
-<td>Revisión de reglas en firewall, referencia de política aplicada</td>
-<td>Sin control → reglas inconsistentes permiten accesos indebidos</td>
+<td>Accesos indebidos no detectados → persistencia de atacantes</td>
 </tr>
 <tr class="even">
-<td>Accesos por VPN documentados (externos y hacia bancos centrales)</td>
-<td>TI / Cumplimiento</td>
-<td>Listado de túneles VPN activos, alcance, logs de tráfico</td>
-<td>VPN sin regulación → fuga de datos, intrusión por terceros</td>
+<td>Registro de accesos fallidos a endpoints y servidores</td>
+<td>Intentos fallidos de login deben generar alertas y correlación en SIEM</td>
+<td>Seguridad / SOC</td>
+<td>Ataques de fuerza bruta no detectados → compromiso de credenciales</td>
 </tr>
 <tr class="odd">
-<td>Administración limitada a horarios definidos</td>
-<td>TI / Seguridad</td>
-<td>Políticas en SIEM, revisión de logs fuera de horario</td>
-<td>Accesos nocturnos → persistencia de atacantes sin detección</td>
-</tr>
-<tr class="even">
-<td>Respaldos segmentados e inaccesibles desde usuarios</td>
+<td>EDR desplegado en endpoints y servidores</td>
+<td>Monitoreo y respuesta local</td>
 <td>TI</td>
-<td>Revisión de topología de red de backups, pruebas de restauración</td>
-<td>Ransomware borra respaldos si están en la misma red que producción</td>
-</tr>
-<tr class="odd">
-<td>Logs enviados a SIEM centralizado (aplicación, sistema, seguridad)</td>
-<td>Seguridad / SOC</td>
-<td>Validar envío en tiempo real, correlación en SIEM (Wazuh, Splunk)</td>
-<td>Incidentes sin trazabilidad ni detección temprana</td>
+<td>Ransomware y malware no detectados</td>
 </tr>
 <tr class="even">
-<td>Servidores de seguridad (IDS/IPS, Snort, Suricata, IA) incluidos en inventario y actualizados</td>
+<td>XDR implementado</td>
+<td>Correlación multicanal de incidentes</td>
 <td>Seguridad / SOC</td>
-<td>Reporte de actualización de firmas/reglas, pruebas de funcionamiento</td>
-<td>IDS/IPS sin actualización → ataques avanzados sin detección</td>
+<td>Ataques coordinados no detectados</td>
 </tr>
 <tr class="odd">
-<td>Servidores de IA y microservicios monitorizados</td>
-<td>DevOps / Seguridad</td>
-<td>Auditoría de APIs, revisión de logs de anomalías</td>
-<td>Microservicios sin control → puerta de entrada a sistemas internos</td>
+<td>HIDS/NIDS configurados</td>
+<td>Monitoreo de hosts y tráfico de red</td>
+<td>Seguridad</td>
+<td>Intrusiones sin detección temprana</td>
+</tr>
+<tr class="even">
+<td>SIEM centraliza logs</td>
+<td>Eventos de red, servidores, aplicaciones, usuarios</td>
+<td>SOC</td>
+<td>Incidentes sin correlación ni trazabilidad</td>
+</tr>
+<tr class="odd">
+<td>Alertas de comportamiento</td>
+<td>Reglas y umbrales ajustados</td>
+<td>SOC</td>
+<td>Eventos críticos pasan desapercibidos</td>
+</tr>
+<tr class="even">
+<td>Procedimiento de respuesta a incidentes</td>
+<td>Playbooks de ransomware, fraude, phishing</td>
+<td>Seguridad / Cumplimiento</td>
+<td>Respuesta improvisada, aumento del impacto</td>
+</tr>
+<tr class="odd">
+<td>Integración de IA/UEBA</td>
+<td>Analítica de patrones y anomalías</td>
+<td>SOC</td>
+<td>APTs y ataques avanzados no detectados</td>
 </tr>
 </tbody>
 </table>
@@ -937,13 +1017,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Unidad3/indexUnidad3.html" class="pagination-link" aria-label="Unidad : Introducción a la Seguridad de Redes y Conectividad">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Unidad : Introducción a la Seguridad de Redes y Conectividad</span></span>
+      <a href="../Unidad5/indexUnidad5.html" class="pagination-link" aria-label="Unidad : Firewalls, WAF y Seguridad Perimetral">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Unidad : Firewalls, WAF y Seguridad Perimetral</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Unidad5/indexUnidad5.html" class="pagination-link" aria-label="Unidad : Firewalls, WAF y Seguridad Perimetral">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Unidad : Firewalls, WAF y Seguridad Perimetral</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Unidad7/indexUnidad7.html" class="pagination-link" aria-label="Unidad : Gestión de Parches y Actualizaciones">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Unidad : Gestión de Parches y Actualizaciones</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
